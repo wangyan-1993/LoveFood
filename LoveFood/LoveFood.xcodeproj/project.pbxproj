@@ -12,6 +12,9 @@
 		7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CB31C4C9EC30076C419 /* AppDelegate.m */; };
 		7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A827CB51C4C9EC30076C419 /* Assets.xcassets */; };
 		7A827CB91C4C9EC30076C419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A827CB71C4C9EC30076C419 /* LaunchScreen.storyboard */; };
+		7A827CF01C4CACDE0076C419 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CE11C4CACDE0076C419 /* FavoriteViewController.m */; };
+		7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CE71C4CACDE0076C419 /* FindViewController.m */; };
+		7A827CF21C4CACDE0076C419 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CED1C4CACDE0076C419 /* MoreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,13 @@
 		7A827CB51C4C9EC30076C419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A827CB81C4C9EC30076C419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A827CBA1C4C9EC30076C419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A827CD61C4CAB5F0076C419 /* LoveFood.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoveFood.pch; path = ../LoveFood.pch; sourceTree = "<group>"; };
+		7A827CE01C4CACDE0076C419 /* FavoriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteViewController.h; sourceTree = "<group>"; };
+		7A827CE11C4CACDE0076C419 /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
+		7A827CE61C4CACDE0076C419 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		7A827CE71C4CACDE0076C419 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		7A827CEC1C4CACDE0076C419 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		7A827CED1C4CACDE0076C419 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		EAD4C491D1FD262C0CDDDFCA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,8 +72,8 @@
 			children = (
 				7A827CB21C4C9EC30076C419 /* AppDelegate.h */,
 				7A827CB31C4C9EC30076C419 /* AppDelegate.m */,
-				7A827CC01C4CA12A0076C419 /* Classes */,
-				7A827CCD1C4CA12A0076C419 /* Library */,
+				7A827CDD1C4CACDE0076C419 /* Classes */,
+				7A827CF31C4CACEF0076C419 /* Librarys */,
 				7A827CB51C4C9EC30076C419 /* Assets.xcassets */,
 				7A827CB71C4C9EC30076C419 /* LaunchScreen.storyboard */,
 				7A827CBA1C4C9EC30076C419 /* Info.plist */,
@@ -80,115 +90,123 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7A827CC01C4CA12A0076C419 /* Classes */ = {
+		7A827CDD1C4CACDE0076C419 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7A827CC11C4CA12A0076C419 /* favorite */,
-				7A827CC51C4CA12A0076C419 /* find */,
-				7A827CC91C4CA12A0076C419 /* more */,
+				7A827CDE1C4CACDE0076C419 /* Favorite */,
+				7A827CE41C4CACDE0076C419 /* Find */,
+				7A827CEA1C4CACDE0076C419 /* More */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		7A827CC11C4CA12A0076C419 /* favorite */ = {
+		7A827CDE1C4CACDE0076C419 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				7A827CC21C4CA12A0076C419 /* controllers */,
-				7A827CC31C4CA12A0076C419 /* models */,
-				7A827CC41C4CA12A0076C419 /* views */,
+				7A827CDF1C4CACDE0076C419 /* Controllers */,
+				7A827CE21C4CACDE0076C419 /* models */,
+				7A827CE31C4CACDE0076C419 /* views */,
 			);
-			path = favorite;
+			path = Favorite;
 			sourceTree = "<group>";
 		};
-		7A827CC21C4CA12A0076C419 /* controllers */ = {
+		7A827CDF1C4CACDE0076C419 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A827CE01C4CACDE0076C419 /* FavoriteViewController.h */,
+				7A827CE11C4CACDE0076C419 /* FavoriteViewController.m */,
 			);
-			path = controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		7A827CC31C4CA12A0076C419 /* models */ = {
+		7A827CE21C4CACDE0076C419 /* models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = models;
 			sourceTree = "<group>";
 		};
-		7A827CC41C4CA12A0076C419 /* views */ = {
+		7A827CE31C4CACDE0076C419 /* views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		7A827CC51C4CA12A0076C419 /* find */ = {
+		7A827CE41C4CACDE0076C419 /* Find */ = {
 			isa = PBXGroup;
 			children = (
-				7A827CC61C4CA12A0076C419 /* controllers */,
-				7A827CC71C4CA12A0076C419 /* models */,
-				7A827CC81C4CA12A0076C419 /* views */,
+				7A827CE51C4CACDE0076C419 /* controllers */,
+				7A827CE81C4CACDE0076C419 /* models */,
+				7A827CE91C4CACDE0076C419 /* views */,
 			);
-			path = find;
+			path = Find;
 			sourceTree = "<group>";
 		};
-		7A827CC61C4CA12A0076C419 /* controllers */ = {
+		7A827CE51C4CACDE0076C419 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A827CE61C4CACDE0076C419 /* FindViewController.h */,
+				7A827CE71C4CACDE0076C419 /* FindViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		7A827CC71C4CA12A0076C419 /* models */ = {
+		7A827CE81C4CACDE0076C419 /* models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = models;
 			sourceTree = "<group>";
 		};
-		7A827CC81C4CA12A0076C419 /* views */ = {
+		7A827CE91C4CACDE0076C419 /* views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		7A827CC91C4CA12A0076C419 /* more */ = {
+		7A827CEA1C4CACDE0076C419 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				7A827CCA1C4CA12A0076C419 /* controllers */,
-				7A827CCB1C4CA12A0076C419 /* models */,
-				7A827CCC1C4CA12A0076C419 /* views */,
+				7A827CEB1C4CACDE0076C419 /* controllers */,
+				7A827CEE1C4CACDE0076C419 /* models */,
+				7A827CEF1C4CACDE0076C419 /* views */,
 			);
-			path = more;
+			path = More;
 			sourceTree = "<group>";
 		};
-		7A827CCA1C4CA12A0076C419 /* controllers */ = {
+		7A827CEB1C4CACDE0076C419 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A827CEC1C4CACDE0076C419 /* MoreViewController.h */,
+				7A827CED1C4CACDE0076C419 /* MoreViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
 		};
-		7A827CCB1C4CA12A0076C419 /* models */ = {
+		7A827CEE1C4CACDE0076C419 /* models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = models;
 			sourceTree = "<group>";
 		};
-		7A827CCC1C4CA12A0076C419 /* views */ = {
+		7A827CEF1C4CACDE0076C419 /* views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = views;
 			sourceTree = "<group>";
 		};
-		7A827CCD1C4CA12A0076C419 /* Library */ = {
+		7A827CF31C4CACEF0076C419 /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
+				7A827CD61C4CAB5F0076C419 /* LoveFood.pch */,
 			);
-			path = Library;
-			sourceTree = "<group>";
+			name = Librarys;
+			path = LoveFood/Librarys;
+			sourceTree = SOURCE_ROOT;
 		};
 		D0D9E5A51AA281ACB0FA488D /* Frameworks */ = {
 			isa = PBXGroup;
@@ -328,8 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A827CF01C4CACDE0076C419 /* FavoriteViewController.m in Sources */,
 				7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */,
 				7A827CB11C4C9EC30076C419 /* main.m in Sources */,
+				7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */,
+				7A827CF21C4CACDE0076C419 /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
