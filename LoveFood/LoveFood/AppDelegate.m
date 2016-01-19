@@ -21,7 +21,7 @@
     self.tabBarVC = [[UITabBarController alloc]init];
     UIStoryboard *findStoryBoard = [UIStoryboard storyboardWithName:@"find" bundle:nil];
     UINavigationController *findNav = findStoryBoard.instantiateInitialViewController;
-    findNav.tabBarItem.title = @"搜索";
+    findNav.tabBarItem.title = @"热门搜索";
     findNav.tabBarItem.image = [UIImage imageNamed:@"find"];
     
     UIStoryboard *favoriteStoryBoard = [UIStoryboard storyboardWithName:@"favorite" bundle:nil];
@@ -36,7 +36,7 @@
     moreNav.tabBarItem.title = @"更多";
     self.tabBarVC.tabBar.tintColor = kMainColor;
     self.tabBarVC.viewControllers = @[findNav, favoriteNav, moreNav];
-    self.tabBarVC.tabBar.barTintColor = [UIColor whiteColor];
+    self.tabBarVC.tabBar.barTintColor = [UIColor blackColor];
     self.window.rootViewController = self.tabBarVC;
     
     self.window.backgroundColor = [UIColor whiteColor];

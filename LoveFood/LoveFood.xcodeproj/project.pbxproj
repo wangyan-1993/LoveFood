@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		65F42CA1EE0FA36A727C6058 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 044C10776D29CF0D4096257D /* libPods.a */; };
+		7A2364701C4E1AD1005A0A3F /* FindTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A23646E1C4E1AD1005A0A3F /* FindTableViewCell.m */; };
+		7A2364711C4E1AD1005A0A3F /* FindTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A23646F1C4E1AD1005A0A3F /* FindTableViewCell.xib */; };
+		7A2364741C4E1E95005A0A3F /* FindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2364731C4E1E95005A0A3F /* FindModel.m */; };
+		7A2364761C4E23C7005A0A3F /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A2364751C4E23C7005A0A3F /* Property List.plist */; };
+		7A2364791C4E2CBA005A0A3F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2364781C4E2CBA005A0A3F /* ListViewController.m */; };
+		7A23647F1C4E32F3005A0A3F /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A23647E1C4E32F3005A0A3F /* UIViewController+Common.m */; };
+		7A2364811C4E37B0005A0A3F /* List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A2364801C4E37B0005A0A3F /* List.plist */; };
 		7A6B97F71C4CE96800885D9D /* find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F61C4CE96800885D9D /* find.storyboard */; };
 		7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F81C4CE98800885D9D /* favorite.storyboard */; };
 		7A6B97FB1C4CE9A900885D9D /* more.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97FA1C4CE9A900885D9D /* more.storyboard */; };
@@ -23,6 +30,17 @@
 /* Begin PBXFileReference section */
 		044C10776D29CF0D4096257D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41514CB55E27F6DFAEAEC4DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A23646D1C4E1AD1005A0A3F /* FindTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindTableViewCell.h; sourceTree = "<group>"; };
+		7A23646E1C4E1AD1005A0A3F /* FindTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindTableViewCell.m; sourceTree = "<group>"; };
+		7A23646F1C4E1AD1005A0A3F /* FindTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindTableViewCell.xib; sourceTree = "<group>"; };
+		7A2364721C4E1E95005A0A3F /* FindModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindModel.h; sourceTree = "<group>"; };
+		7A2364731C4E1E95005A0A3F /* FindModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindModel.m; sourceTree = "<group>"; };
+		7A2364751C4E23C7005A0A3F /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		7A2364771C4E2CBA005A0A3F /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		7A2364781C4E2CBA005A0A3F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		7A23647D1C4E32F3005A0A3F /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
+		7A23647E1C4E32F3005A0A3F /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
+		7A2364801C4E37B0005A0A3F /* List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = List.plist; sourceTree = "<group>"; };
 		7A6B97F61C4CE96800885D9D /* find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = find.storyboard; sourceTree = "<group>"; };
 		7A6B97F81C4CE98800885D9D /* favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = favorite.storyboard; sourceTree = "<group>"; };
 		7A6B97FA1C4CE9A900885D9D /* more.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = more.storyboard; sourceTree = "<group>"; };
@@ -156,6 +174,8 @@
 			children = (
 				7A827CE61C4CACDE0076C419 /* FindViewController.h */,
 				7A827CE71C4CACDE0076C419 /* FindViewController.m */,
+				7A2364771C4E2CBA005A0A3F /* ListViewController.h */,
+				7A2364781C4E2CBA005A0A3F /* ListViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -163,6 +183,10 @@
 		7A827CE81C4CACDE0076C419 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				7A2364721C4E1E95005A0A3F /* FindModel.h */,
+				7A2364731C4E1E95005A0A3F /* FindModel.m */,
+				7A2364751C4E23C7005A0A3F /* Property List.plist */,
+				7A2364801C4E37B0005A0A3F /* List.plist */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -171,6 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				7A6B97F61C4CE96800885D9D /* find.storyboard */,
+				7A23646D1C4E1AD1005A0A3F /* FindTableViewCell.h */,
+				7A23646E1C4E1AD1005A0A3F /* FindTableViewCell.m */,
+				7A23646F1C4E1AD1005A0A3F /* FindTableViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -214,6 +241,8 @@
 			children = (
 				7A827CD61C4CAB5F0076C419 /* LoveFood.pch */,
 				7A827CF41C4CAD480076C419 /* Header.h */,
+				7A23647D1C4E32F3005A0A3F /* UIViewController+Common.h */,
+				7A23647E1C4E32F3005A0A3F /* UIViewController+Common.m */,
 			);
 			name = Librarys;
 			path = LoveFood/Librarys;
@@ -297,6 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2364811C4E37B0005A0A3F /* List.plist in Resources */,
+				7A2364711C4E1AD1005A0A3F /* FindTableViewCell.xib in Resources */,
+				7A2364761C4E23C7005A0A3F /* Property List.plist in Resources */,
 				7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */,
 				7A827CB91C4C9EC30076C419 /* LaunchScreen.storyboard in Resources */,
 				7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */,
@@ -360,10 +392,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2364741C4E1E95005A0A3F /* FindModel.m in Sources */,
+				7A2364701C4E1AD1005A0A3F /* FindTableViewCell.m in Sources */,
+				7A2364791C4E2CBA005A0A3F /* ListViewController.m in Sources */,
 				7A827CF01C4CACDE0076C419 /* FavoriteViewController.m in Sources */,
 				7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */,
 				7A827CB11C4C9EC30076C419 /* main.m in Sources */,
 				7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */,
+				7A23647F1C4E32F3005A0A3F /* UIViewController+Common.m in Sources */,
 				7A827CF21C4CACDE0076C419 /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

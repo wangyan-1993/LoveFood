@@ -1,0 +1,342 @@
+{
+xiachufang =     {
+"@status" = ok;
+recipe =         (
+{
+"create_time" = "2014-07-04 03:33:37";
+"friendly_create_time" = "1\U5e74\U524d";
+id = 100312247;
+ident = "04bae7b47e3011e5857eb82a72e00100.jpg";
+ingredient =                 (
+{
+name = "\U4f4e\U7b4b\U9762\U7c89";
+},
+{
+name = "\U8513\U8d8a\U8393\U5e72";
+},
+{
+name = "\U5168\U86cb\U6db2\Uff08\U6253\U6563\U7684\U9e21\U86cb\Uff09";
+},
+{
+name = "\U7cd6\U7c89";
+},
+{
+name = "\U9ec4\U6cb9";
+}
+);
+name = "\U8513\U8d8a\U8393\U997c\U5e72 \U8513\U8d8a\U8393\U66f2\U5947";
+photo = "http://s2.cdn.xiachufang.com/04bae7b47e3011e5857eb82a72e00100.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/04bae7b47e3011e5857eb82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/04bae7b47e3011e5857eb82a72e00100.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/04bae7b47e3011e5857eb82a72e00100.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/04bae7b47e3011e5857eb82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/04bae7b47e3011e5857eb82a72e00100.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "8.3";
+stats =                 {
+"n_collects" = 119808;
+"n_comments" = 391;
+"n_cooked" = 10780;
+"n_cooked_last_week" = 300;
+"n_dishes" = 11755;
+"n_pv" = 155966;
+};
+thumb = "http://s2.cdn.xiachufang.com/04bae7b47e3011e5857eb82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+"create_time" = "2011-06-27 12:25:38";
+"friendly_create_time" = "4\U5e74\U524d";
+id = 21614;
+ident = "be9f8cf57c9211e584507f0741f94ddb.jpg";
+ingredient =                 (
+{
+name = "\U4f4e\U7b4b\U9762\U7c89";
+},
+{
+name = "\U8513\U8d8a\U8393\U5e72";
+},
+{
+name = "\U9e21\U86cb\U6db2(\U6253\U6563\U7684\U5168\U86cb)";
+},
+{
+name = "\U9ec4\U6cb9";
+},
+{
+name = "\U7cd6\U7c89";
+}
+);
+name = "\U8513\U8d8a\U8393\U997c\U5e72";
+photo = "http://s2.cdn.xiachufang.com/be9f8cf57c9211e584507f0741f94ddb.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/be9f8cf57c9211e584507f0741f94ddb.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/be9f8cf57c9211e584507f0741f94ddb.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/be9f8cf57c9211e584507f0741f94ddb.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/be9f8cf57c9211e584507f0741f94ddb.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/be9f8cf57c9211e584507f0741f94ddb.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "8.4";
+stats =                 {
+"n_collects" = 167289;
+"n_comments" = 1107;
+"n_cooked" = 28211;
+"n_cooked_last_week" = 242;
+"n_dishes" = 32948;
+"n_pv" = 777953;
+};
+thumb = "http://s2.cdn.xiachufang.com/be9f8cf57c9211e584507f0741f94ddb.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+"create_time" = "2012-12-18 23:51:22";
+"friendly_create_time" = "3\U5e74\U524d";
+id = 263852;
+ident = "14dbb25e7d4311e58f6a13a10792eddb.jpg";
+ingredient =                 (
+{
+name = "\U4f4e\U7b4b\U9762\U7c89";
+},
+{
+name = "\U8513\U8d8a\U8393\U5e72";
+},
+{
+name = "\U7cd6\U7c89";
+},
+{
+name = "\U9ec4\U6cb9";
+},
+{
+name = "\U9e21\U86cb\U6db2";
+}
+);
+name = "\U8513\U8d8a\U8393\U66f2\U5947";
+photo = "http://s2.cdn.xiachufang.com/14dbb25e7d4311e58f6a13a10792eddb.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/14dbb25e7d4311e58f6a13a10792eddb.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/14dbb25e7d4311e58f6a13a10792eddb.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/14dbb25e7d4311e58f6a13a10792eddb.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/14dbb25e7d4311e58f6a13a10792eddb.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/14dbb25e7d4311e58f6a13a10792eddb.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "8.4";
+stats =                 {
+"n_collects" = 51616;
+"n_comments" = 195;
+"n_cooked" = 5327;
+"n_cooked_last_week" = 26;
+"n_dishes" = 6033;
+"n_pv" = 138128;
+};
+thumb = "http://s2.cdn.xiachufang.com/14dbb25e7d4311e58f6a13a10792eddb.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+"create_time" = "2015-07-11 22:14:15";
+"friendly_create_time" = "192\U5929\U524d";
+id = 100523546;
+ident = "a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg";
+ingredient =                 (
+{
+name = "\U9ec4\U6cb9";
+},
+{
+name = "\U4f4e\U7c89";
+},
+{
+name = "\U7cd6";
+},
+{
+name = "\U5168\U86cb\U6db2";
+},
+{
+name = "\U8513\U8d8a\U8393\U5e72";
+},
+{
+name = "160\U2103";
+}
+);
+name = "\U8513\U8d8a\U8393\U66f2\U5947\U997c\U5e72";
+photo = "http://s2.cdn.xiachufang.com/a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "";
+stats =                 {
+"n_collects" = 16;
+"n_comments" = 0;
+"n_cooked" = 1;
+"n_cooked_last_week" = 0;
+"n_dishes" = 4;
+"n_pv" = 227;
+};
+thumb = "http://s2.cdn.xiachufang.com/a8846e807eda11e5ac7f1f6c0c9c4e1f.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+"create_time" = "2011-11-17 11:39:40";
+"friendly_create_time" = "4\U5e74\U524d";
+id = 135739;
+ident = "7d50d9787d2b11e58a4db82a72e00100.jpg";
+ingredient =                 (
+{
+name = "\U4f4e\U7c89";
+},
+{
+name = "\U9ec4\U6cb9";
+},
+{
+name = "\U8513\U8d8a\U8393\U5e72";
+},
+{
+name = "\U5168\U86cb\U6db2";
+},
+{
+name = "\U7cd6\U7c89";
+}
+);
+name = "\U8513\U8d8a\U8393\U997c\U5e72";
+photo = "http://s2.cdn.xiachufang.com/7d50d9787d2b11e58a4db82a72e00100.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/7d50d9787d2b11e58a4db82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/7d50d9787d2b11e58a4db82a72e00100.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/7d50d9787d2b11e58a4db82a72e00100.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/7d50d9787d2b11e58a4db82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/7d50d9787d2b11e58a4db82a72e00100.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "8.4";
+stats =                 {
+"n_collects" = 40544;
+"n_comments" = 230;
+"n_cooked" = 5006;
+"n_cooked_last_week" = 26;
+"n_dishes" = 5569;
+"n_pv" = 102488;
+};
+thumb = "http://s2.cdn.xiachufang.com/7d50d9787d2b11e58a4db82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+"create_time" = "2013-08-22 16:01:07";
+"friendly_create_time" = "2\U5e74\U524d";
+id = 100023757;
+ident = "b3cb2efd7db211e5a3d429c3f661dab0.jpg";
+ingredient =                 (
+{
+name = "\U9ec4\U6cb9";
+},
+{
+name = "\U7cd6\U7c89";
+},
+{
+name = "\U5168\U86cb\U6db2";
+},
+{
+name = "\U9999\U8349\U7cbe";
+},
+{
+name = "\U4f4e\U7b4b\U9762\U7c89";
+},
+{
+name = "\U5168\U8102\U5976\U7c89";
+},
+{
+name = "\U8513\U8d8a\U8393\U5e72";
+}
+);
+name = "\U8513\U8d8a\U8393\U997c\U5e72\Uff08\U541b\U4e4b\U7248\U6539\U826f\Uff09";
+photo = "http://s2.cdn.xiachufang.com/b3cb2efd7db211e5a3d429c3f661dab0.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/b3cb2efd7db211e5a3d429c3f661dab0.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/b3cb2efd7db211e5a3d429c3f661dab0.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/b3cb2efd7db211e5a3d429c3f661dab0.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/b3cb2efd7db211e5a3d429c3f661dab0.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/b3cb2efd7db211e5a3d429c3f661dab0.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "8.2";
+stats =                 {
+"n_collects" = 59600;
+"n_comments" = 202;
+"n_cooked" = 3813;
+"n_cooked_last_week" = 34;
+"n_dishes" = 4292;
+"n_pv" = 232381;
+};
+thumb = "http://s2.cdn.xiachufang.com/b3cb2efd7db211e5a3d429c3f661dab0.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+"create_time" = "2013-02-27 13:06:56";
+"friendly_create_time" = "2\U5e74\U524d";
+id = 266332;
+ident = "fc4fdad47d4311e589a9590a901d631a.jpg";
+ingredient =                 (
+{
+name = "\U6838\U6843";
+},
+{
+name = "\U4f4e\U7c89";
+},
+{
+name = "\U6ce1\U6253\U7c89";
+},
+{
+name = "\U76d0";
+},
+{
+name = "\U767d\U7cd6";
+},
+{
+name = "\U6c34";
+},
+{
+name = "\U9ec4\U6cb9";
+}
+);
+name = "\U6838\U6843\U8106\U997c";
+photo = "http://s2.cdn.xiachufang.com/fc4fdad47d4311e589a9590a901d631a.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/fc4fdad47d4311e589a9590a901d631a.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/fc4fdad47d4311e589a9590a901d631a.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/fc4fdad47d4311e589a9590a901d631a.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/fc4fdad47d4311e589a9590a901d631a.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/fc4fdad47d4311e589a9590a901d631a.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "";
+stats =                 {
+"n_collects" = 1233;
+"n_comments" = 2;
+"n_cooked" = 44;
+"n_cooked_last_week" = 1;
+"n_dishes" = 46;
+"n_pv" = 2025;
+};
+thumb = "http://s2.cdn.xiachufang.com/fc4fdad47d4311e589a9590a901d631a.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+"create_time" = "2015-03-12 15:54:33";
+"friendly_create_time" = "313\U5929\U524d";
+id = 100460997;
+ident = "84f0ba4c7ea011e5a87ab82a72e00100.jpg";
+ingredient =                 (
+{
+name = "\U4f4e\U7b4b\U9762\U7c89";
+},
+{
+name = "\U9e21\U86cb\U6db2\Uff08\U6253\U6563\U7684\U9e21\U86cb\Uff09";
+},
+{
+name = "\U9ec4\U6cb9";
+},
+{
+name = "\U7cd6\U7c89";
+},
+{
+name = "\U8513\U8d8a\U8393\U5e72";
+}
+);
+name = "\U8513\U8d8a\U8393\U997c\U5e72--\U65b0\U624b\U70d8\U71190\U538b\U529b #\U76ae\U9ed1\U68ee\U6797#";
+photo = "http://s2.cdn.xiachufang.com/84f0ba4c7ea011e5a87ab82a72e00100.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/84f0ba4c7ea011e5a87ab82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/84f0ba4c7ea011e5a87ab82a72e00100.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/84f0ba4c7ea011e5a87ab82a72e00100.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/84f0ba4c7ea011e5a87ab82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/84f0ba4c7ea011e5a87ab82a72e00100.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "8.6";
+stats =                 {
+"n_collects" = 73304;
+"n_comments" = 225;
+"n_cooked" = 3702;
+"n_cooked_last_week" = 151;
+"n_dishes" = 3978;
+"n_pv" = 88310;
+};
+thumb = "http://s2.cdn.xiachufang.com/84f0ba4c7ea011e5a87ab82a72e00100.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+}
+);
+};
+}
