@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		65F42CA1EE0FA36A727C6058 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 044C10776D29CF0D4096257D /* libPods.a */; };
+		7A6B97F71C4CE96800885D9D /* find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F61C4CE96800885D9D /* find.storyboard */; };
+		7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F81C4CE98800885D9D /* favorite.storyboard */; };
+		7A6B97FB1C4CE9A900885D9D /* more.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97FA1C4CE9A900885D9D /* more.storyboard */; };
 		7A827CB11C4C9EC30076C419 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CB01C4C9EC30076C419 /* main.m */; };
 		7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CB31C4C9EC30076C419 /* AppDelegate.m */; };
 		7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A827CB51C4C9EC30076C419 /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		044C10776D29CF0D4096257D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		41514CB55E27F6DFAEAEC4DB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A6B97F61C4CE96800885D9D /* find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = find.storyboard; sourceTree = "<group>"; };
+		7A6B97F81C4CE98800885D9D /* favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = favorite.storyboard; sourceTree = "<group>"; };
+		7A6B97FA1C4CE9A900885D9D /* more.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = more.storyboard; sourceTree = "<group>"; };
 		7A827CAC1C4C9EC30076C419 /* LoveFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A827CB01C4C9EC30076C419 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A827CB21C4C9EC30076C419 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -34,6 +40,7 @@
 		7A827CE71C4CACDE0076C419 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		7A827CEC1C4CACDE0076C419 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		7A827CED1C4CACDE0076C419 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		7A827CF41C4CAD480076C419 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		EAD4C491D1FD262C0CDDDFCA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +100,8 @@
 		7A827CDD1C4CACDE0076C419 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7A827CDE1C4CACDE0076C419 /* Favorite */,
 				7A827CE41C4CACDE0076C419 /* Find */,
+				7A827CDE1C4CACDE0076C419 /* Favorite */,
 				7A827CEA1C4CACDE0076C419 /* More */,
 			);
 			path = Classes;
@@ -129,6 +136,7 @@
 		7A827CE31C4CACDE0076C419 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7A6B97F81C4CE98800885D9D /* favorite.storyboard */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 		7A827CE91C4CACDE0076C419 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7A6B97F61C4CE96800885D9D /* find.storyboard */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -195,6 +204,7 @@
 		7A827CEF1C4CACDE0076C419 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7A6B97FA1C4CE9A900885D9D /* more.storyboard */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -203,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				7A827CD61C4CAB5F0076C419 /* LoveFood.pch */,
+				7A827CF41C4CAD480076C419 /* Header.h */,
 			);
 			name = Librarys;
 			path = LoveFood/Librarys;
@@ -288,6 +299,9 @@
 			files = (
 				7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */,
 				7A827CB91C4C9EC30076C419 /* LaunchScreen.storyboard in Resources */,
+				7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */,
+				7A6B97F71C4CE96800885D9D /* find.storyboard in Resources */,
+				7A6B97FB1C4CE9A900885D9D /* more.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +467,10 @@
 			baseConfigurationReference = EAD4C491D1FD262C0CDDDFCA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LoveFood/LoveFood.pch";
 				INFOPLIST_FILE = LoveFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wang.LoveFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,7 +482,10 @@
 			baseConfigurationReference = 41514CB55E27F6DFAEAEC4DB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LoveFood/LoveFood.pch";
 				INFOPLIST_FILE = LoveFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wang.LoveFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";

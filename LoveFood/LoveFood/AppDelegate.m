@@ -18,6 +18,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.tabBarVC = [[UITabBarController alloc]init];
+    UIStoryboard *findStoryBoard = [UIStoryboard storyboardWithName:@"find" bundle:nil];
+    UINavigationController *findNav = findStoryBoard.instantiateInitialViewController;
+    findNav.tabBarItem.title = @"搜索";
+    findNav.tabBarItem.image = [UIImage imageNamed:@"find"];
+    
+    UIStoryboard *favoriteStoryBoard = [UIStoryboard storyboardWithName:@"favorite" bundle:nil];
+    UINavigationController *favoriteNav = favoriteStoryBoard.instantiateInitialViewController;
+    favoriteNav.tabBarItem.image = [UIImage imageNamed:@"heart"];
+    favoriteNav.tabBarItem.title = @"最近流行";
+   
+    
+    UIStoryboard *moreStoryBoard = [UIStoryboard storyboardWithName:@"more" bundle:nil];
+    UINavigationController *moreNav = moreStoryBoard.instantiateInitialViewController;
+    moreNav.tabBarItem.image = [UIImage imageNamed:@"Settings"];
+    moreNav.tabBarItem.title = @"更多";
+    self.tabBarVC.tabBar.tintColor = kMainColor;
+    self.tabBarVC.viewControllers = @[findNav, favoriteNav, moreNav];
+    self.tabBarVC.tabBar.barTintColor = [UIColor whiteColor];
+    self.window.rootViewController = self.tabBarVC;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
