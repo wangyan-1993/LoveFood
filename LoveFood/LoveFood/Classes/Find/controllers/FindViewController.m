@@ -10,12 +10,13 @@
 #import "FindModel.h"
 #import "FindTableViewCell.h"
 #import "ListViewController.h"
+
 @interface FindViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *array;
-@property(nonatomic, strong) NSMutableArray *searchArray;
 @property(nonatomic, strong) UISearchBar *mySearchBar;
 @property(nonatomic, strong) UIView *blackView;
+
 @end
 
 @implementation FindViewController
@@ -113,10 +114,12 @@
 #pragma mark---UISearchBarDelegate
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     [self.mySearchBar setShowsCancelButton:YES animated:YES];
-    self.blackView = [[UIView alloc]initWithFrame:CGRectMake(0, 104, kWidth, kHeigth)];
-    [self.blackView setBackgroundColor:[UIColor blackColor]];
-    self.blackView.alpha = 0.5;
-    [self.view addSubview:self.blackView];
+    
+        self.blackView = [[UIView alloc]initWithFrame:CGRectMake(0, 104, kWidth, kHeigth)];
+        [self.blackView setBackgroundColor:[UIColor blackColor]];
+        self.blackView.alpha = 0.5;
+        [self.view addSubview:self.blackView];
+    
     NSLog(@"搜索Begin");
     return YES;
 }
@@ -128,6 +131,18 @@
     [searchBar resignFirstResponder];
     [searchBar setShowsCancelButton:NO animated:YES];
     self.blackView.hidden = YES;
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    ListViewController *listVC = [[ListViewController alloc]init];
+       listVC.navigationItem.title = searchBar.text;
+    listVC.name = searchBar.text;
+    [self.navigationController pushViewController:listVC animated:YES];
+    [searchBar resignFirstResponder];
+    [searchBar setShowsCancelButton:NO animated:YES];
+    self.blackView.hidden = YES;
+    searchBar.text = nil;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

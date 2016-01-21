@@ -9,5 +9,13 @@
 #import "FindModel.h"
 
 @implementation FindModel
+- (instancetype)initWithDictionary:(NSDictionary *)dict{
+    self = [super init];
+    if (self) {
+        self.delta = dict[@"delta"];
+        self.keyword = dict[@"keyword"];
+    }
+    return self;
+}
 
 @end

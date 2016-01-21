@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FindModel.h"
 @interface FindTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *numLabel;
+
+@property (nonatomic, strong) FindModel *model;
 
 @end
