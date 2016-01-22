@@ -20,7 +20,8 @@
         for (NSDictionary *dic in array) {
             self.peiliao = [self.peiliao stringByAppendingFormat:@"%@  ", dic[@"name"]];
         }
-        
+        NSDictionary *statsDic = dict[@"stats"];
+        self.cooked = statsDic[@"n_cooked"];
         
     }
     return self;

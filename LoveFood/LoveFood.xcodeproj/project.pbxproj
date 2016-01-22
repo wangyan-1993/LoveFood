@@ -22,6 +22,9 @@
 		7A2364761C4E23C7005A0A3F /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A2364751C4E23C7005A0A3F /* Property List.plist */; };
 		7A2364791C4E2CBA005A0A3F /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2364781C4E2CBA005A0A3F /* ListViewController.m */; };
 		7A23647F1C4E32F3005A0A3F /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A23647E1C4E32F3005A0A3F /* UIViewController+Common.m */; };
+		7A3B68131C507B9300508DB8 /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3B68111C507B9300508DB8 /* FavoriteTableViewCell.m */; };
+		7A3B68141C507B9300508DB8 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A3B68121C507B9300508DB8 /* FavoriteTableViewCell.xib */; };
+		7A3B68191C5087E800508DB8 /* Favorite.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A3B68181C5087E800508DB8 /* Favorite.plist */; };
 		7A6B97F71C4CE96800885D9D /* find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F61C4CE96800885D9D /* find.storyboard */; };
 		7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F81C4CE98800885D9D /* favorite.storyboard */; };
 		7A6B97FB1C4CE9A900885D9D /* more.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97FA1C4CE9A900885D9D /* more.storyboard */; };
@@ -59,6 +62,10 @@
 		7A2364781C4E2CBA005A0A3F /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		7A23647D1C4E32F3005A0A3F /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
 		7A23647E1C4E32F3005A0A3F /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
+		7A3B68101C507B9300508DB8 /* FavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewCell.h; sourceTree = "<group>"; };
+		7A3B68111C507B9300508DB8 /* FavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewCell.m; sourceTree = "<group>"; };
+		7A3B68121C507B9300508DB8 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		7A3B68181C5087E800508DB8 /* Favorite.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Favorite.plist; sourceTree = "<group>"; };
 		7A6B97F61C4CE96800885D9D /* find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = find.storyboard; sourceTree = "<group>"; };
 		7A6B97F81C4CE98800885D9D /* favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = favorite.storyboard; sourceTree = "<group>"; };
 		7A6B97FA1C4CE9A900885D9D /* more.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = more.storyboard; sourceTree = "<group>"; };
@@ -186,6 +193,7 @@
 		7A827CE21C4CACDE0076C419 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				7A3B68181C5087E800508DB8 /* Favorite.plist */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -194,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				7A6B97F81C4CE98800885D9D /* favorite.storyboard */,
+				7A3B68101C507B9300508DB8 /* FavoriteTableViewCell.h */,
+				7A3B68111C507B9300508DB8 /* FavoriteTableViewCell.m */,
+				7A3B68121C507B9300508DB8 /* FavoriteTableViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -376,12 +387,14 @@
 				7A2364761C4E23C7005A0A3F /* Property List.plist in Resources */,
 				7A067B4A1C4F7A2D009ADB8D /* blueArrowDown.png in Resources */,
 				7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */,
+				7A3B68141C507B9300508DB8 /* FavoriteTableViewCell.xib in Resources */,
 				7A827CB91C4C9EC30076C419 /* LaunchScreen.storyboard in Resources */,
 				7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */,
 				7A067B501C4F7A95009ADB8D /* ProgressHUD.bundle in Resources */,
 				7A067B491C4F7A2D009ADB8D /* blueArrow.png in Resources */,
 				7A6B97F71C4CE96800885D9D /* find.storyboard in Resources */,
 				7A6B97FB1C4CE9A900885D9D /* more.storyboard in Resources */,
+				7A3B68191C5087E800508DB8 /* Favorite.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +462,7 @@
 				7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */,
 				7A067B511C4F7A95009ADB8D /* ProgressHUD.m in Sources */,
 				7A827CB11C4C9EC30076C419 /* main.m in Sources */,
+				7A3B68131C507B9300508DB8 /* FavoriteTableViewCell.m in Sources */,
 				7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */,
 				7A067B551C4F7F83009ADB8D /* ListTableViewCell.m in Sources */,
 				7A23647F1C4E32F3005A0A3F /* UIViewController+Common.m in Sources */,

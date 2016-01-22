@@ -22,8 +22,8 @@
     // Initialization code
 }
 - (void)setModel:(ListModel *)model{
-    self.nameLabel.text = model.name;
-    self.peiliaoLabel.text = model.peiliao;
+    self.nameLabel.text =[NSString stringWithFormat:@"  %@", model.name];
+    self.peiliaoLabel.text = [NSString stringWithFormat:@"  %@", model.peiliao];
     [self.image sd_setImageWithURL:[NSURL URLWithString:model.image  ]placeholderImage:nil];
     self.blackImage.image = [UIImage imageNamed:@"009"];
 }

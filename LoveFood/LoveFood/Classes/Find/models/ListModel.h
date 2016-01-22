@@ -14,4 +14,5 @@
 @property(nonatomic, copy) NSString *peiliao;
 @property(nonatomic, copy) NSString *image;
 @property(nonatomic, copy) NSString *idList;
+@property(nonatomic, copy) NSString *cooked;
 @end
