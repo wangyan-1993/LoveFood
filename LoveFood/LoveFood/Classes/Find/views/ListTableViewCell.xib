@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4C-kv-7Wa">
-                        <rect key="frame" x="103" y="14" width="264" height="30"/>
+                        <rect key="frame" x="103" y="14" width="265" height="30"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,7 +35,7 @@
                         <rect key="frame" x="352" y="36" width="9" height="13"/>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.99597781896591187" green="0.98440831899642944" blue="0.87945801019668579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.97965604026845643" green="0.92431312919462982" blue="0.90184563758388936" alpha="1" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="blackImage" destination="44g-1N-1hA" id="5IV-jI-KbX"/>

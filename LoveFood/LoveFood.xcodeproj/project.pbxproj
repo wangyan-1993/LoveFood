@@ -35,6 +35,12 @@
 		7A827CF01C4CACDE0076C419 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CE11C4CACDE0076C419 /* FavoriteViewController.m */; };
 		7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CE71C4CACDE0076C419 /* FindViewController.m */; };
 		7A827CF21C4CACDE0076C419 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CED1C4CACDE0076C419 /* MoreViewController.m */; };
+		7ADC292F1C51DE3A00A91F23 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC292E1C51DE3A00A91F23 /* DetailsViewController.m */; };
+		7ADC29311C52113900A91F23 /* DetailsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC29301C52113900A91F23 /* DetailsList.plist */; };
+		7ADC29341C52139500A91F23 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC29331C52139500A91F23 /* HWTools.m */; };
+		7AF50D6B1C57280D0060D662 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */; };
+		7AF50D6C1C57280D0060D662 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */; };
+		7AF50D6F1C5729760060D662 /* DetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D6E1C5729760060D662 /* DetailsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +90,16 @@
 		7A827CEC1C4CACDE0076C419 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		7A827CED1C4CACDE0076C419 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		7A827CF41C4CAD480076C419 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		7ADC292D1C51DE3A00A91F23 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		7ADC292E1C51DE3A00A91F23 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		7ADC29301C52113900A91F23 /* DetailsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DetailsList.plist; sourceTree = "<group>"; };
+		7ADC29321C52139500A91F23 /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTools.h; sourceTree = "<group>"; };
+		7ADC29331C52139500A91F23 /* HWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTools.m; sourceTree = "<group>"; };
+		7AF50D681C57280D0060D662 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
+		7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
+		7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
+		7AF50D6D1C5729760060D662 /* DetailsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsModel.h; sourceTree = "<group>"; };
+		7AF50D6E1C5729760060D662 /* DetailsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsModel.m; sourceTree = "<group>"; };
 		EAD4C491D1FD262C0CDDDFCA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -226,6 +242,8 @@
 				7A827CE71C4CACDE0076C419 /* FindViewController.m */,
 				7A2364771C4E2CBA005A0A3F /* ListViewController.h */,
 				7A2364781C4E2CBA005A0A3F /* ListViewController.m */,
+				7ADC292D1C51DE3A00A91F23 /* DetailsViewController.h */,
+				7ADC292E1C51DE3A00A91F23 /* DetailsViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -237,7 +255,10 @@
 				7A2364731C4E1E95005A0A3F /* FindModel.m */,
 				7A067B571C4F7FA0009ADB8D /* ListModel.h */,
 				7A067B581C4F7FA0009ADB8D /* ListModel.m */,
+				7AF50D6D1C5729760060D662 /* DetailsModel.h */,
+				7AF50D6E1C5729760060D662 /* DetailsModel.m */,
 				7A2364751C4E23C7005A0A3F /* Property List.plist */,
+				7ADC29301C52113900A91F23 /* DetailsList.plist */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -252,6 +273,9 @@
 				7A067B521C4F7F83009ADB8D /* ListTableViewCell.h */,
 				7A067B531C4F7F83009ADB8D /* ListTableViewCell.m */,
 				7A067B541C4F7F83009ADB8D /* ListTableViewCell.xib */,
+				7AF50D681C57280D0060D662 /* DetailsTableViewCell.h */,
+				7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */,
+				7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -299,6 +323,8 @@
 				7A827CF41C4CAD480076C419 /* Header.h */,
 				7A23647D1C4E32F3005A0A3F /* UIViewController+Common.h */,
 				7A23647E1C4E32F3005A0A3F /* UIViewController+Common.m */,
+				7ADC29321C52139500A91F23 /* HWTools.h */,
+				7ADC29331C52139500A91F23 /* HWTools.m */,
 			);
 			name = Librarys;
 			path = LoveFood/Librarys;
@@ -387,6 +413,7 @@
 				7A2364761C4E23C7005A0A3F /* Property List.plist in Resources */,
 				7A067B4A1C4F7A2D009ADB8D /* blueArrowDown.png in Resources */,
 				7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */,
+				7AF50D6C1C57280D0060D662 /* DetailsTableViewCell.xib in Resources */,
 				7A3B68141C507B9300508DB8 /* FavoriteTableViewCell.xib in Resources */,
 				7A827CB91C4C9EC30076C419 /* LaunchScreen.storyboard in Resources */,
 				7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */,
@@ -395,6 +422,7 @@
 				7A6B97F71C4CE96800885D9D /* find.storyboard in Resources */,
 				7A6B97FB1C4CE9A900885D9D /* more.storyboard in Resources */,
 				7A3B68191C5087E800508DB8 /* Favorite.plist in Resources */,
+				7ADC29311C52113900A91F23 /* DetailsList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +485,15 @@
 				7A2364741C4E1E95005A0A3F /* FindModel.m in Sources */,
 				7A2364701C4E1AD1005A0A3F /* FindTableViewCell.m in Sources */,
 				7A2364791C4E2CBA005A0A3F /* ListViewController.m in Sources */,
+				7ADC29341C52139500A91F23 /* HWTools.m in Sources */,
 				7A067B591C4F7FA0009ADB8D /* ListModel.m in Sources */,
 				7A827CF01C4CACDE0076C419 /* FavoriteViewController.m in Sources */,
+				7ADC292F1C51DE3A00A91F23 /* DetailsViewController.m in Sources */,
 				7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */,
 				7A067B511C4F7A95009ADB8D /* ProgressHUD.m in Sources */,
 				7A827CB11C4C9EC30076C419 /* main.m in Sources */,
+				7AF50D6B1C57280D0060D662 /* DetailsTableViewCell.m in Sources */,
+				7AF50D6F1C5729760060D662 /* DetailsModel.m in Sources */,
 				7A3B68131C507B9300508DB8 /* FavoriteTableViewCell.m in Sources */,
 				7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */,
 				7A067B551C4F7F83009ADB8D /* ListTableViewCell.m in Sources */,

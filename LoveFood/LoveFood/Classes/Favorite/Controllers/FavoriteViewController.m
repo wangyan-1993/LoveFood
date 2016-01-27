@@ -10,6 +10,7 @@
 #import "ListModel.h"
 #import "FavoriteTableViewCell.h"
 #import "PullingRefreshTableView.h"
+#import "DetailsViewController.h"
 @interface FavoriteViewController ()<UITableViewDataSource, UITableViewDelegate, PullingRefreshTableViewDelegate>
 {
     NSInteger _pageCount;
@@ -48,7 +49,14 @@
 
 
 #pragma mark---UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailsViewController *detailsVC = [[DetailsViewController alloc]init];
+    ListModel *model = self.arrayModel[indexPath.row];
+    detailsVC.idDetails = model.idList;
+    detailsVC.navigationItem.title = model.name;
 
+    [self.navigationController pushViewController:detailsVC animated:YES];
+}
 #pragma mark---PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
     _pageCount = 0;
@@ -91,8 +99,8 @@
     [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         //NSLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         NSLog(@"+++%@", responseObject);
-        
+        //NSLog(@"+++%@", responseObject);
+        [ProgressHUD showSuccess:@"美食已烹调完毕，请食用"];
         NSDictionary *dictionary = responseObject;
         NSDictionary *dict = dictionary[@"xiachufang"];
         NSString *status = dict[@"@status"];

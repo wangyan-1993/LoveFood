@@ -53,7 +53,6 @@
        // NSLog(@"%@", downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //NSLog(@"%@", responseObject);
-        
         NSDictionary *dic = responseObject;
         NSDictionary *xiaDic = dic[@"xiachufang"];
         NSString *status = xiaDic[@"@status"];

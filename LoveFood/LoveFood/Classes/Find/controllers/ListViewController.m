@@ -10,6 +10,7 @@
 #import "PullingRefreshTableView.h"
 #import "ListModel.h"
 #import "ListTableViewCell.h"
+#import "DetailsViewController.h"
 @interface ListViewController ()<UITableViewDataSource, UITableViewDelegate, PullingRefreshTableViewDelegate>
 {
     NSInteger _pageCount;
@@ -27,7 +28,6 @@
     // Do any additional setup after loading the view.
     self.tabBarController.tabBar.hidden = YES;
     [self showBackBtn];
-    [self configData];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:nil] forCellReuseIdentifier:@"list"];
 
@@ -68,7 +68,7 @@
         //NSLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
    // NSLog(@"+++%@", responseObject);
-        
+         [ProgressHUD showSuccess:@"美食已烹调完毕，请食用"];
         NSDictionary *dictionary = responseObject;
         NSDictionary *dict = dictionary[@"xiachufang"];
         NSString *status = dict[@"@status"];
@@ -111,7 +111,14 @@
 
 
 #pragma mark---UITableViewDelegate
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailsViewController *detailsVC = [[DetailsViewController alloc]init];
+    ListModel *model = self.arrayModel[indexPath.row];
+    detailsVC.idDetails = model.idList;
+    detailsVC.navigationItem.title = model.name;
+    [self.navigationController pushViewController:detailsVC animated:YES];
+    
+}
 #pragma mark---PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
     _pageCount = 0;

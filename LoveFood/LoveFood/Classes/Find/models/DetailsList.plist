@@ -1,0 +1,259 @@
+{
+xiachufang =     {
+"@status" = ok;
+recipe =         {
+author =             {
+id = 101187412;
+name = "\U6653\U5ef7\U7231\U70d8\U7119";
+photo = "http://s2.cdn.xiachufang.com/fc245480b94611e5a18f6f7f4607404f.jpg?imageView2/1/w/30/h/30/interlace/1/q/90/format/jpg/.jpg";
+photo60 = "http://s2.cdn.xiachufang.com/fc245480b94611e5a18f6f7f4607404f.jpg?imageView2/1/w/60/h/60/interlace/1/q/90/format/jpg/.jpg";
+};
+"create_time" = "2016-01-19 00:52:21";
+"dish_author" =             (
+);
+"friendly_create_time" = "3\U5929\U524d";
+id = 100641021;
+ident = "52b68368bda011e599b4adae683fef0f.jpg";
+ingredient =             (
+{
+amount = "";
+cat = "";
+name = "\U4f7f\U7528\U6750\U6599";
+},
+{
+amount = "80\U514b";
+cat = "";
+name = "A\Uff1a\U86cb\U767d\U7c89\Uff08\U4e0d\U662f\U5403\U7684\U4fdd\U5065\U54c1\Uff09";
+},
+{
+amount = "80\U514b";
+cat = M;
+name = "\U77ff\U6cc9\U6c34";
+},
+{
+amount = "8\U514b";
+cat = M;
+name = "\U7ec6\U76d0";
+},
+{
+amount = 60g;
+cat = "";
+name = "B\Uff1a\U7ec6\U7802\U7cd6\Uff08\U6253\U53d1\U86cb\U767d\U7c89\U7528\Uff09";
+},
+{
+amount = "1100\U514b";
+cat = "";
+name = "C\Uff1a\U7389\U7c73\U7cd6\U6d46\Uff08\U4e5f\U53eb\U6c34\U8bd2\Uff09";
+},
+{
+amount = "160\U514b";
+cat = M;
+name = "\U7ec6\U7802\U7cd6";
+},
+{
+amount = "200\U514b";
+cat = M;
+name = "\U77ff\U6cc9\U6c34";
+},
+{
+amount = "200\U514b";
+cat = "";
+name = "D\Uff1a\U9ec4\U6cb9";
+},
+{
+amount = "\U53ef\U53ef\U5473\Uff0c\U5976\U7c89\U4f7f\U7528\U91cf320\U514b";
+cat = "";
+name = "\U62b9\U8336\U5473\Uff0c\U5976\U7c89\U4f7f\U7528\U91cf320\U514b";
+},
+{
+amount = "\U6cd5\U8299\U5a1c\U53ef\U53ef\U7c8970\U514b\Uff08\U53ef\U589e\U51cf\Uff09";
+cat = "";
+name = "\U4ebf\U7279\U4f73\U62b9\U833632\U514b";
+},
+{
+amount = "\U82b1\U751f400\U514b";
+cat = "";
+name = "\U82b1\U751f400\U514b";
+},
+{
+amount = "\U505a\U53ef\U53ef\U53e3\U5473\U770b\U8fd9\U6392";
+cat = "";
+name = "\U505a\U62b9\U8336\U53e3\U5473\U770b\U8fd9\U6392";
+}
+);
+instruction =             (
+{
+ident = "ee2e895cbdb711e5944e8f3130123195.jpg";
+step = 0;
+text = "\U5f53\U5e74\U7ea2\U8863\U82b1\U751f\Uff0c\U70e4\U7bb1180\U5ea6\Uff0c\U70d8\U57f915-20\U5206\U949f\Uff0c\U671f\U95f4\U4e0d\U65ad\U7ffb\U52a8\U81f3\U70d8\U57f9\U719f\U900f\U4e0a\U8272\U5747\U5300\Uff0c\U539f\U5219\U662f\U4e0a\U4e86\U8272\U7684\U82b1\U751f\U66f4\U9999\U3002\U719f\U900f\U7684\U82b1\U751f\U53bb\U76ae\U5907\U7528\U3002\U51ac\U5b63\U5929\U51b7\U7cd6\U786c\U7684\U5feb\Uff0c\U53ef\U628a\U82b1\U751f\U4f4e\U6e29\U4fdd\U6e29\Uff0c\U8fd9\U6837\U66f4\U597d\U64cd\U4f5c\U3002\n\n\U4e5f\U53ef\U4ee5\U76f4\U63a5\U4e70\U53bb\U76ae\U82b1\U751f\Uff0c\U70d8\U7119\U540e\U4f7f\U7528";
+url = "http://s2.cdn.xiachufang.com/ee2e895cbdb711e5944e8f3130123195.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "2a6dd6e6bdb811e5b6998f3130123195.jpg";
+step = 1;
+text = "\U8fd9\U662f\U4e3b\U8981\U6750\U6599\Uff0c\U5206\U522b\U662f\U5976\U7c89\U3001\U7389\U7c73\U7cd6\U6d46\Uff08\U6c34\U8bd2\Uff09\U3001\U86cb\U767d\U7c89\Uff08\U4e5f\U53eb\U86cb\U6e05\U7c89\Uff09\U7edd\U5bf9\U4e0d\U662f\U98df\U7528\U7684\U5b89\U5229\U86cb\U767d\U7c89\Uff0c\U90a3\U79cd\U662f\U4fdd\U5065\U54c1";
+url = "http://s2.cdn.xiachufang.com/2a6dd6e6bdb811e5b6998f3130123195.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "89eaa5c5bdb811e5bae5b12e9c804648.jpg";
+step = 2;
+text = "\U86cb\U767d\U7c89\U52a0\U76d0\Uff0c\U52a0\U6c34\Uff0c\U8fd9\U4e2a\U86cb\U767d\U7c89\U6211\U8ba4\U4e3a\U4e0d\U662f\U65e0\U5473\U7684\Uff0c\U7a0d\U5fae\U6709\U70b9\U5473\U9053\Uff0c\U4f46\U505a\U51fa\U4efb\U4f55\U98df\U54c1\U90fd\U6ca1\U6709\U5473\U9053";
+url = "http://s2.cdn.xiachufang.com/89eaa5c5bdb811e5bae5b12e9c804648.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "b347997cbdb811e5b401b82a72e00100.jpg";
+step = 3;
+text = "\U5c06A\U6750\U6599\U6df7\U5408\Uff0c\U7528\U7535\U52a8\U6253\U86cb\U5668\U6253\U81f3\U7a0d\U6709\U7c98\U6027\Uff0c\U52a0\U5165B\U7ee7\U7eed\U6253\U53d1\Uff0c\U6253\U53d1\U81f3\U53d1\U767d\Uff0c\U6709\U660e\U663e\U7eb9\U8def\Uff0c\U653e\U7f6e\U5907\U7528\U3002\U4e0d\U4f1a\U50cf\U86cb\U767d\U4e00\U6837\Uff0c\U4f53\U79ef\U53d8\U5f88\U5927\Uff0c\U4f46\U4f1a\U51fa\U73b0\U7eb9\U8def";
+url = "http://s2.cdn.xiachufang.com/b347997cbdb811e5b401b82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "9e460b0cbdb911e5b401b82a72e00100.jpg";
+step = 4;
+text = "\U51c6\U5907\U79f0\U91cd\U597d\U5976\U7c89\U4e0e\U62b9\U8336\U7c89\Uff0c\U6700\U597d\U8fc7\U7b5b\U4e00\U4e0b\Uff0c\U56e0\U4e3a\U6211\U624b\U91cc\U73b0\U5728\U53ea\U6709\U4ebf\U7279\U4f73\U7684\U62b9\U8336\Uff0c\U5c31\U7528\U7684\U8fd9\U6b3e\Uff0c\U505a\U51fa\U6765\U6548\U679c\U4e0d\U9519\Uff0c\U7f8e\U7f8e\U7684";
+url = "http://s2.cdn.xiachufang.com/9e460b0cbdb911e5b401b82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "8b0b7e4abdba11e59302b12e9c804648.jpg";
+step = 5;
+text = "\U716e\U7cd6\U662f\U5173\U952e\U6240\U5728\Uff0c\U725b\U8f67\U7cd6\U7684\U8f6f\U786c\U5ea6\U4e5f\U8ddf\U716e\U7cd6\U6c34\U6709\U5173\Uff0c\U6e29\U5ea6\U4f4e\U7684\U7cd6\U8f6f\U6613\U878d\Uff0c\U6e29\U5ea6\U592a\U9ad8\Uff0c\U7cd6\U786c\U53e3\U611f\U53d8\U5dee\Uff0c\U597d\U5427\Uff0c\U6765\U8bf4\U600e\U4e48\U716e\U3002\n\n     \U5c06C\Uff1a\U6750\U6599\U6df7\U5408\U5927\U706b\U716e\U81f3142\U5ea6\U79bb\U706b.\U6211\U6700\U8fd1\U7528145\U5ea6\Uff08\U5fc5\U5907\U98df\U54c1\U6e29\U5ea6\U8ba1\Uff0c\U5f88\U591a\U5730\U65b9\U7528\U5f97\U5230\Uff09\Uff0c\U53ef\U4ee5\U5148\U5927\U706b\U5feb\U901f\U71ac\U716e\Uff0c\U5f53\U6e29\U5ea6\U8fbe\U5230120\U5ea6\U65f6\Uff08\U7cd6\U6e29\U5f88\U5947\U7279\Uff0c\U6709\U65f6\U4f1a\U957f\U65f6\U95f4\U505c\U6ede\U4e0d\U5347\U6e29\Uff0c\U4e0d\U8981\U7740\U6025\Uff0c\U4e00\U65e6\U4e0a\U6e29\U5ea6\U4e5f\U662f\U5f88\U5feb\U7684\Uff09\U53ef\U9002\U5f53\U8c03\U5c0f\U706b\U529b\Uff0c\U5f85\U8fbe\U5230\Uff08137-145\U5ea6\Uff0c\U9002\U4f60\U7684\U5ba4\U6e29\U8c03\U6574\Uff09\U79bb\U706b\U540e\U52a0\U5165\U9ec4\U6cb9\U6405\U62cc\U81f3\U9ec4\U6cb9\U878d\U5316\U3002\U5173\U4e8e\U6e29\U5ea6\U7684\U95ee\U9898\Uff0c\U6e29\U5ea6\U8d8a\U9ad8\U7cd6\U7684\U53e3\U611f\U8d8a\U786c\U4e9b\Uff0c\U5929\U6c14\U70ed\U5c31\U8981\U63d0\U9ad8\U4e9b\U6e29\U5ea6\U3002\U4f46\U662f\U7cd6\U6d46\U592a\U6d45\Uff0c\U592a\U5c11\U7684\U8bdd\U786e\U5b9e\U4f1a\U5f71\U54cd\U6d4b\U6e29\Uff0c\U4eb2\U4eec\U81ea\U5df1\U60f3\U4e2a\U529e\U6cd5\Uff0c\U4e00\U5b9a\U8981\U5b9e\U6e29\U3002\n\n\U73b0\U5728\U6211\U90fd\U662f\U7528\U4e0d\U7c98\U9505\U6765\U71ac\U7cd6\Uff0c\U8fd9\U6837\U9505\U5b50\U597d\U6e05\U7406";
+url = "http://s2.cdn.xiachufang.com/8b0b7e4abdba11e59302b12e9c804648.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "917e5463bdfb11e5a9ad3f2aac0302cd.jpg";
+step = 6;
+text = "\U6211\U7528\U7684\U7ebf\U5f0f\U7684\Uff0c\U8fd9\U6837\U642d\U5728\U9505\U8fb9\U5c31\U884c\Uff0c\U624b\U6301\U7684\U6e29\U5ea6\U8ba1\U5fc5\U987b\U7528\U624b\U62ff\U7740\Uff0c\U8bf4\U5b9e\U8bdd\U70ed\U6c14\U86ee\U718f\U624b\U7684\Uff0c\U8fd9\U79cd\U7ebf\U5f0f\U7684\U65b9\U4fbf\U591a\U4e86\Uff0c\U4f46\U6e29\U5ea6\U8fbe\U5230\U540e\Uff0c\U62ff\U8d77\U6765\U5468\U8fb9\U90fd\U6d4b\U8bd5\U4e0b\U90fd\U80fd\U8fbe\U5230\U4f60\U8981\U7684\U6e29\U5ea6\U65f6\Uff0c\U518d\U5173\U706b";
+url = "http://s2.cdn.xiachufang.com/917e5463bdfb11e5a9ad3f2aac0302cd.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "27856a6abdbb11e5b401b82a72e00100.jpg";
+step = 7;
+text = "\U7cd6\U6e29\U8fbe\U5230\U540e\U5173\U706b\Uff0c\U5012\U5165\U5df2\U7ecf\U878d\U5316\U6210\U6db2\U4f53\U7684\U9ec4\U6cb9(\U9ec4\U6cb9\U653e\U5fae\U6ce2\U7089\U91cc\U53ee\U4e00\U4f1a\U5c31\U4f1a\U662f\U6db2\U4f53\U4e86\Uff01";
+url = "http://s2.cdn.xiachufang.com/27856a6abdbb11e5b401b82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "aeb3de9cbdfd11e5ba5021104d8fd925.jpg";
+step = 8;
+text = "\U76f4\U63a5\U5728\U9505\U91cc\U52a0\U6211\U4eec\U6253\U53d1\U597d\U7684\U86cb\U767d\U971c\Uff0c\U8fdb\U884c\U6405\U62cc\Uff0c\U4f60\U4f1a\U53d1\U73b0\U8d8a\U6405\U62cc\U63d0\U53ca\U8d8a\U5927\Uff0c\U56e0\U4e3a\U5728\U65e9\U4e0a\U8fd8\U4f1a\U6709\U6e29\U5ea6\Uff0c\U975e\U5e38\U597d\U6405\U62cc";
+url = "http://s2.cdn.xiachufang.com/aeb3de9cbdfd11e5ba5021104d8fd925.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "c2a6bd73bdfd11e5a4b121104d8fd925.jpg";
+step = 9;
+text = "\U52a0\U5165\U5976\U7c89\Uff0c\U7a0d\U5fae\U6405\U62cc\U5747\U5300";
+url = "http://s2.cdn.xiachufang.com/c2a6bd73bdfd11e5a4b121104d8fd925.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "c03521f0bdfd11e5ba8db82a72e00100.jpg";
+step = 10;
+text = "\U628a\U82b1\U751f\U8c46\U76f4\U63a5\U5012\U5728\U7845\U80f6\U57ab\U4e0a\Uff0c\U5012\U4e0a\U5df2\U7ecf\U6405\U62cc\U597d\U7684\U7cd6\U6d46";
+url = "http://s2.cdn.xiachufang.com/c03521f0bdfd11e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "c9eee223bdfd11e583273dde02b1ae92.jpg";
+step = 11;
+text = "\U4e00\U5b9a\U8981\U5e26\U624b\U5957\U54e6\Uff01\U5f85\U6e29\U5ea6\U4e0d\U4f1a\U70eb\U624b\U540e\U8fdb\U884c\U63c9\Uff0c\U82b1\U751f\U8c46\U80fd\U5168\U90e8\U63c9\U8fdb\U53bb\Uff0c\U63c9\U4e0d\U52a8\U7684\U6e29\U5ea6\U4e0d\U5bf9\U3002";
+url = "http://s2.cdn.xiachufang.com/c9eee223bdfd11e583273dde02b1ae92.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "c78c4d66bdfd11e59f7f21104d8fd925.jpg";
+step = 12;
+text = "\U63c9\U634f\U540e\Uff0c\U5f85\U82b1\U751f\U8c46\U5168\U90e8\U5305\U88f9\U8fdb\U53bb\U540e\Uff0c\U653e\U5230\U5df2\U7ecf\U94fa\U597d\U7845\U6cb9\U7eb8\U7684\U70e4\U76d8\U4e2d\U8fdb\U884c\U6574\U5f62\Uff0c\U7528\U6211\U4eec\U90a3\U4e2a\U5b9a\U9ad8\U64c0\U9762\U68cd\Uff0c\U62ff\U6389\U5b9a\U9ad8\U5708\U64c0\U5e73\U6574\U5f62\U5373\U53ef\U3002";
+url = "http://s2.cdn.xiachufang.com/c78c4d66bdfd11e59f7f21104d8fd925.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "c7ec913abdfd11e58bbc21104d8fd925.jpg";
+step = 13;
+text = "\U5c3d\U91cf\U64c0\U5e73\U538b\U7d27\Uff0c\U8fd9\U6837\U505a\U51fa\U7684\U7cd6\U624d\U4f1a\U5bc6\U5b9e\Uff0c\U6c14\U6ce1\U5c11\Uff0c\U5403\U7740\U97e7\U6027\U5374\U4e0d\U5931\U53e3\U611f\U3002\U8fd9\U65f6\U5019\U7cd6\U5df2\U7ecf\U5927\U81f4\U5b8c\U6210\Uff0c\U6211\U4eec\U628a\U5b83\U653e\U7f6e\U65c1\U8fb9\U81ea\U7136\U51b7\U5374\Uff0c\U7ee7\U7eed\U6f14\U793a\U53ef\U53ef\U5473\U725b\U8f67\U7cd6";
+url = "http://s2.cdn.xiachufang.com/c7ec913abdfd11e58bbc21104d8fd925.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "d3712430bdfd11e5a9373f2aac0302cd.jpg";
+step = 14;
+text = "\U5976\U7c89\U52a0\U53ef\U53ef\U7c89\U8fc7\U7b5b\U5907\U7528";
+url = "http://s2.cdn.xiachufang.com/d3712430bdfd11e5a9373f2aac0302cd.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "daa8bc86bdfd11e5ba8db82a72e00100.jpg";
+step = 15;
+text = "\U71ac\U7cd6\U90e8\U5206\U987a\U5e8f\U64cd\U4f5c\U4e0d\U53d8\Uff0c\U5c31\U662f\U52a0\U5165\U7684\U662f\U53ef\U53ef\U5976\U7c89\Uff0c\U6405\U62cc\U5747\U5300\U540e\U63c9\U5165\U82b1\U751f\U8c46\Uff0c\U64c0\U5e73\U6574\U5f62\U3001\U81ea\U7136\U51b7\U5374";
+url = "http://s2.cdn.xiachufang.com/daa8bc86bdfd11e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "d25a40e0bdfd11e5ba8db82a72e00100.jpg";
+step = 16;
+text = "\U6574\U5f62\U597d\U7684\U725b\U8f67\U7cd6\Uff0c\U5927\U7ea6\U539a\U5ea61.5cm,\U4e0d\U8981\U592a\U539a\U4e86\Uff0c\U8981\U4e48\U5207\U51fa\U6765\U7684\U7cd6\U4f1a\U592a\U539a\U4e0d\U597d\U88c5\U888b";
+url = "http://s2.cdn.xiachufang.com/d25a40e0bdfd11e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "f14f0364bdfd11e5ba8db82a72e00100.jpg";
+step = 17;
+text = "\U6211\U6ca1\U6709\U4f7f\U7528\U4ec0\U4e48\U7279\U6b8a\U7684\U5200\U5177\Uff0c\U5c31\U662f\U5bb6\U91cc\U7528\U7684\U83dc\U5200\Uff0c\U4f46\U6700\U597d\U950b\U5229\U4e00\U70b9\Uff0c\U8981\U4e48\U5207\U7cd6\U591a\U96be\Uff0c\U4f60\U61c2\U7684\U3002\U3002\U3002\U3002\U7528\U5200\U7b80\U5355\U505a\U597d\U5207\U5272\U75d5\U8ff9\Uff0c\U5f00\U59cb\U5206\U6761";
+url = "http://s2.cdn.xiachufang.com/f14f0364bdfd11e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "dce0e352bdfd11e5ba8db82a72e00100.jpg";
+step = 18;
+text = "\U7528\U5200\U5168\U90e8\U5206\U6210\U5927\U6761\U540e\Uff0c\U5728\U5207\U5206\U5c0f\U5757\n\U63a7\U5236\U957f\U5ea6\U54e6\Uff01\U8981\U4e48\U4e0d\U597d\U7ed9\U888b\U5b50\U5c01\U53e3";
+url = "http://s2.cdn.xiachufang.com/dce0e352bdfd11e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "e33780c6bdfd11e5ba8db82a72e00100.jpg";
+step = 19;
+text = "\U5207\U5c0f\U5757";
+url = "http://s2.cdn.xiachufang.com/e33780c6bdfd11e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "f3a8d77abdfd11e5a27b21104d8fd925.jpg";
+step = 20;
+text = "\U53ef\U53ef\U5473\U5206\U6761";
+url = "http://s2.cdn.xiachufang.com/f3a8d77abdfd11e5a27b21104d8fd925.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "e95e6b47bdfd11e595bf3dde02b1ae92.jpg";
+step = 21;
+text = "\U5168\U90e8\U5206\U597d";
+url = "http://s2.cdn.xiachufang.com/e95e6b47bdfd11e595bf3dde02b1ae92.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "f57775cabdfd11e5ba8db82a72e00100.jpg";
+step = 22;
+text = "\U989c\U8272\U53e3\U611f\Uff0c\U6211\U5c1d\U8bd5\U4e86\Uff0c\U90fd\U597d\U5403\Uff01\U592a\U68d2\U4e86\Uff0c\U8fd9\U8d27\U771f\U7684\U662f\U8d8a\U56bc\U8d8a\U9999\Uff0c\U505c\U4e0d\U4e0b\U6765\U7684\U8282\U594f";
+url = "http://s2.cdn.xiachufang.com/f57775cabdfd11e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "fa63ab6bbdfd11e586aa21104d8fd925.jpg";
+step = 23;
+text = "\U88c5\U888b\Uff0c\U4e0d\U8fc7\U6211\U6ca1\U6709\U78e8\U7802\U888b\Uff0c\U5f69\U8272\U725b\U8f67\U7cd6\U888b\U88c5\U539f\U5473\U7684\U66f4\U597d\U770b\Uff0c\U7528\U78e8\U7802\U6b3e\U88c5\U62b9\U8336\U5473\U6216\U53ef\U53ef\U5473\U611f\U89c9\U66f4\U597d\Uff01";
+url = "http://s2.cdn.xiachufang.com/fa63ab6bbdfd11e586aa21104d8fd925.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+},
+{
+ident = "eae2981ebe0311e5ba8db82a72e00100.jpg";
+step = 24;
+text = "\U662f\U4e0d\U662f\U8fd9\U79cd\U611f\U89c9\U7684\U66f4\U597d\U770b\U5462\Uff01\U7cd6\U888b\U8fd8\U4f1a\U56e2\Uff0c\U4e0d\U8fc7\U53d1\U8d27\U4e0d\U8fc7\U6765\Uff0c\U6682\U65f6\U505c\U4e00\U4e0b\Uff0c\U8981\U7684\U8bdd\U7ee7\U7eed\U5173\U6ce8\U201c\U4ebf\U7279\U4f73\U70d8\U7119\U9986\U201d\Uff0c\U8fd8\U4f1a\U7ed9\U5927\U5bb6\U7ee7\U7eed\U56e2\Uff0c\U4ef7\U683c\U4e0d\U53d86\U5143100\U4e2a/\U6bcf\U624e";
+url = "http://s2.cdn.xiachufang.com/eae2981ebe0311e5ba8db82a72e00100.jpg?imageView2/2/w/200/interlace/1/q/90/format/jpg/.jpg";
+}
+);
+name = "\U71ac\U7cd6\U7248---\U62b9\U8336\U725b\U8f67\U7cd6\U3001\U53ef\U53ef\U725b\U8f67\U7cd6\U65b9\U5b50\U90fd\U7ed9\U4f60";
+photo = "http://s2.cdn.xiachufang.com/52b68368bda011e599b4adae683fef0f.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo140 = "http://s2.cdn.xiachufang.com/52b68368bda011e599b4adae683fef0f.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo280 = "http://s2.cdn.xiachufang.com/52b68368bda011e599b4adae683fef0f.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+photo526 = "http://s2.cdn.xiachufang.com/52b68368bda011e599b4adae683fef0f.jpg?imageView2/2/w/620/interlace/1/q/90/format/jpg/.jpg";
+photo80 = "http://s2.cdn.xiachufang.com/52b68368bda011e599b4adae683fef0f.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+photo90 = "http://s2.cdn.xiachufang.com/52b68368bda011e599b4adae683fef0f.jpg?imageView2/1/w/280/h/216/interlace/1/q/90/format/jpg/.jpg";
+score = "8.7";
+stats =             {
+"n_collects" = 13127;
+"n_comments" = 104;
+"n_cooked" = 108;
+"n_cooked_last_week" = 102;
+"n_dishes" = 141;
+"n_pv" = 3728;
+};
+summary = "\U4f60\U8981\U662f\U5403\U8fc7\U71ac\U7cd6\U7248\U7684\U4e00\U5b9a\U5c31\U4e0d\U4f1a\U5403\U68c9\U82b1\U7cd6\U7248\U672c\U7684\U4e86\Uff01\n\n\U56e0\U4e3a\U53e3\U611f\U4e0a\U5dee\U592a\U591a\U4e86\Uff01\U5bf9\U4e8e\U4e00\U4e2a\U5904\U5973\U5ea7\U6765\U8bf4\Uff0c\U5fc5\U987b\U64b8\U597d\U5403\U7684\U7248\U672c\Uff01\n\n\U6653\U5ef7\U59d0\U771f\U7684\U662f\U6beb\U65e0\U4fdd\U7559\U7684\U628a\U65b9\U5b50\U90fd\U7ed9\U4f60\U4eec\U4e86\Uff0c\U6709\U7684\U670b\U53cb\U5f88\U7528\U5fc3\Uff0c\U8fde\U6211\U7684\U8bc4\U8bba\U5979\U90fd\U8bfb\Uff0c\U6bcf\U4e2a\U65b9\U5b50\U8ddf\U7740\U8d70\Uff0c\U6211\U773c\U89c1\U7740\U4ed6\U4eec\U8fdb\U6b65\Uff0c\U6709\U7684\U53a8\U53cb\U8fd8\U5728\U7ea0\U7ed3\U7684\U95ee\U6211\U4f4e\U7c89\U80fd\U7528\U4ec0\U4e48\U4ee3\U66ff\Uff01\U8fd9\U5c31\U662f\U5dee\U8ddd\U3002\n\n\U4f60\U8fdb\U6b65\U3001\U6211\U5e2e\U4f60\Uff0c\U4f60\U4e0d\U8fdb\U6b65\U3001\U6211\U5e2e\U4e0d\U4e86\U4f60\Uff01\n\n\U6b64\U65b9\U51fa\U6210\U54c1\U7cd62500\U514b\U4e5f\U5c31\U662f5\U65a4\Uff0c\U6ca1\U5305\U7cd6\U7eb8\U7684\U79f0\U91cd\Uff0c\U53ef\U53ef\U5473\U7684\U76f8\U5bf9\U8fd8\U4f1a\U591a\U4e00\U4e9b\U3002\Uff08\U521d\U6b21\U5c1d\U8bd5\U5efa\U8bae\U51cf\U534a\n\n\n\n\U5982\U679c\U505a\U539f\U5473\U7684\U53c2\U8003\U8fd9\U4e2a\U65b9\U5b50\Uff1a\nA\U6599\Uff1a\U86cb\U767d\U7c89\t 40g\n\U77ff\U6cc9\U6c34\t 40g\n\U7ec6\U76d0\t 4g\nB\U6599\Uff1a\U7ec6\U7802\U7cd6\t 30g\nC\U6599\Uff1a\U7389\U7c73\U7cd6\U6d46\Uff08\U6c34\U8bd2\Uff09\t 550g\n\U7ec6\U7802\U7cd6\t 80g\n\U77ff\U6cc9\U6c34\t 100g\nD\U6599\Uff1a\U9ec4\U6cb9\t 100g\n\U5976\U7c89\t 175g\n\U82b1\U751f\t 400g\Uff0c\U6b64\U6bd4\U4f8b\U51fa\U88f8\U7cd62.5\U65a4";
+thumb = "http://s2.cdn.xiachufang.com/52b68368bda011e599b4adae683fef0f.jpg?imageView2/1/w/140/h/106/interlace/1/q/90/format/jpg/.jpg";
+tips = "\U788e\U788e\U5ff5\U4e00\U4e0b\Uff1a\n1\U3001\U86cb\U767d\U7c89\U4e0d\U662f\U5403\U7684\U4fdd\U5065\U54c1\Uff0c\U4e0d\U80fd\U7528\U522b\U7684\U4ee3\U66ff\U3001\U6709\U4eba\U7528\U86cb\U6e05\U4ee3\U66ff\Uff0c\U6211\U6ca1\U8bd5\U8fc7\U4e0d\U77e5\U9053\U3002\n2\U3001\U7389\U7c73\U7cd6\U6d46\U4e5f\U53eb\U6c34\U8bd2\Uff0c\U5b83\U4e0d\U662f\U9ea6\U82bd\U7cd6\Uff0c\U9ea6\U82bd\U7cd6\U662f\U9ec4\U8272\U7684\Uff0c\U6211\U4eec\U7684\U725b\U8f67\U7cd6\U8981\U767d\U767d\U7684\U624d\U597d\U770b\Uff0c\U6240\U4ee5\U4e0d\U8981\U66ff\U6362\Uff0c\U540e\U679c\U81ea\U8d1f\Uff0c\U522b\U95ee\U6211\U4e3a\U4ec0\U4e48\U3002\n3\U3001\U5173\U4e8e\U7cd6\U6d46\U6e29\U5ea6\Uff0c\U8fd9\U4e2a\U6e29\U5ea6\U8ddf\U4f60\U7684\U5ba4\U6e29\U6709\U5173\U7cfb\Uff0c\U5982\U679c\U5728\U51b7\U7684\U5730\U65b9\U53ef\U4ee5\U4e0d\U5fc5\U71ac\U9ad8\U6e29\U4e5f\U80fd\U662f\U786c\U7684\Uff0c\U4f46\U5728\U70ed\U7684\U5730\U65b9\Uff0c\U6bd4\U5982\U6211\U8fd9\U91cc\Uff0c\U6211\U8bd5\U8fc7\U5fc5\U987b145\U5ea6\Uff0c\U4f4e\U6e29\U7684\U8bdd\Uff0c\U7cd6\U5f88\U5bb9\U6613\U53d8\U5f62\Uff0c\U867d\U7136\U53e3\U611f\U4e5f\U597d\Uff0c\U4f46\U662f\U4e0d\U662f\U65b9\U6b63\U7684\U3002\n4\U3001\U4e0d\U8981\U5728\U7845\U80f6\U57ab\U4e0a\U76f4\U63a5\U5207\U7cd6\Uff0c\U4f1a\U5207\U574f\U7845\U80f6\U57ab\n5\U3001\U7cd6\U4e0d\U5bb9\U6613\U574f\U6389\Uff0c\U4f46\U82b1\U751f\U4f1a\U6cb9\U54c8\Uff0c\U5b58\U653e\U51b0\U7bb1\U6211\U8bd5\U8fc7\U4e00\U4e24\U4e2a\U6708\U90fd\U4e0d\U53d8\U5473\Uff0c\U4e5f\U4e0d\U7c98\U888b\U3002\n6\U3001\U5200\U5c3d\U91cf\U950b\U5229\Uff0c\U8981\U4e48\U5207\U8d77\U6765\U5934\U53ef\U5c31\U5927\U4e86\U3002\n7\U3001\U4e00\U6b21\U6027\U624b\U5957\U5fc5\U5907\U54e6\Uff01\n8\U3001\U6211\U5570\U55e6\U7684\U6211\U81ea\U5df1\U90fd\U70e6\U4e86\U3002";
+url = "http://www.xiachufang.com/recipe/100641021/";
+"video_url" = "";
+};
+};
+}
