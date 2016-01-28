@@ -15,6 +15,7 @@
 }
 @property(nonatomic, retain) UITableView *tableView;
 @property(nonatomic, retain) NSMutableArray *modelArray;
+@property(nonatomic, retain) NSMutableArray *recommendArray;
 @end
 
 @implementation DetailsViewController
@@ -28,29 +29,94 @@
     [self configData];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"DetailsTableViewCell" bundle:nil] forCellReuseIdentifier:@"Details"];
-
     [self.view addSubview:self.tableView];
     
 }
 - (void)configData{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    NSString *str = [NSString stringWithFormat:@"%@%@", kDetailsData, self.idDetails];
-    [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSString *str1 = [NSString stringWithFormat:@"%@%@", kRecommendData, self.idDetails];
+    [manager GET:str1 parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-       // NSLog(@"%@", responseObject );
-        NSDictionary *dic = responseObject;
-        [self configTableViewWithDic:dic];
-        [self.tableView reloadData];
+        //NSLog(@"%@", responseObject);
+        NSDictionary *dictionary = responseObject;
+        NSDictionary *dict = dictionary[@"xiachufang"];
+        NSString *status = dict[@"@status"];
+        if ([status isEqualToString:@"ok"]) {
+            NSString *str = dict[@"recipe_ids"];
+            str = [str stringByReplacingOccurrencesOfString:@":" withString:@"%3A"];
+//            [self configDataWithString:str];
+            NSString *str2 = [NSString stringWithFormat:@"%@%@", kTwoListData, str];
+            [manager GET:str2 parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+               // NSLog(@"%@", responseObject);
+                NSDictionary *dictionary = responseObject;
+                NSDictionary *dict = dictionary[@"xiachufang"];
+                NSString *status = dict[@"@status"];
+                if ([status isEqualToString:@"ok"]) {
+                    NSArray *array = dict[@"recipe"];
+                    for (NSDictionary *dic in array) {
+                        [self.recommendArray addObject:dic];
+                    }
+                    [self configDataWithArray:self.recommendArray];
+                }
+                //[self.tableView reloadData];
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                NSLog(@"%@", error);
+            }];
+
+        }
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
     
     
+  
+   
+    
 }
-- (void)configTableViewWithDic:(NSDictionary *)dic{
+- (void)configDataWithArray:(NSMutableArray *)array{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    NSString *str = [NSString stringWithFormat:@"%@%@", kDetailsData, self.idDetails];
+    [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // NSLog(@"%@", responseObject );
+        NSDictionary *dic = responseObject;
+        [self configTableViewWithDic:dic withArray:array];
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+
+}
+
+//- (void)configDataWithString:(NSString *)string{
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+//    NSString *str = [NSString stringWithFormat:@"%@%@", kTwoListData, string];
+//    [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        NSLog(@"%@", responseObject);
+//        NSDictionary *dictionary = responseObject;
+//        NSDictionary *dict = dictionary[@"xiachufang"];
+//        NSString *status = dict[@"@status"];
+//        if ([status isEqualToString:@"ok"]) {
+//            self.recommendArray = dict[@"recipe"];
+//           
+//        }
+//        [self.tableView reloadData];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"%@", error);
+//    }];
+//}
+- (void)configTableViewWithDic:(NSDictionary *)dic withArray:(NSMutableArray *)array{
     NSDictionary *xiachufangDic = dic[@"xiachufang"];
     NSString *status = xiachufangDic[@"@status"];
     if ([status isEqualToString:@"ok"]) {
@@ -99,7 +165,7 @@
             if (i % 2 == 0) {
                peiliaoLabel.frame = CGRectMake(5 , 280+labelHeight + 52 * i / 2 , 182, 50);
             }else{
-                peiliaoLabel.frame = CGRectMake(188, 280+labelHeight + 52 * i / 2 - 26 , 182, 50);
+                peiliaoLabel.frame = CGRectMake(189, 280+labelHeight + 52 * i / 2 - 26 , 182, 50);
             }
              UILabel *name = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, peiliaoLabel.frame.size.width / 4 * 3, 50)];
             name.text = dictionary[@"name"];
@@ -118,12 +184,37 @@
         }else{
             headerView.frame = CGRectMake(0, 0, kWidth, 280 + labelHeight + 52 * (i / 2 + 1));
         }
-self.tableView.tableHeaderView = headerView;
-    
+        self.tableView.tableHeaderView = headerView;
+       
+#pragma mark---footview
+         UIView *footView = [[UIView alloc]init];
+         UILabel *recommendLabel = [[UILabel alloc]init];
+        recommendLabel.text = @"喜欢这个的吃货也喜欢";
+        recommendLabel.font = [UIFont systemFontOfSize:15];
+        recommendLabel.textColor = [UIColor darkGrayColor];
+        UIView *recommendView = [[UIView alloc]init];
+        for (int j = 0; j < 6; j ++) {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+            button.frame = CGRectMake(5+ (j%2) * 184, 5 + j / 2 * 122, 181 , 119);
+            button.backgroundColor = kBackColor;
+            button.tag = j;
+            [button addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
+            UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 172, 90)];
+            [image sd_setImageWithURL:[NSURL URLWithString:array[j][@"photo"]] placeholderImage:nil];
+            [button addSubview:image];
+            UILabel *recommendName = [[UILabel alloc]initWithFrame:CGRectMake(5, 100, 172, 20)];
+            recommendName.text = array[j][@"name"];
+            recommendName.font = [UIFont systemFontOfSize:15];
+            [button addSubview:recommendName];
+            
+            [recommendView addSubview:button];
+        }
+        
+        
         if (![dict[@"tips"] isEqualToString:@""]) {
-            UIView *footView = [[UIView alloc]init];
             UILabel *xiaotieshi = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, kWidth - 30, 10)];
             xiaotieshi.text = @"小贴士";
+            xiaotieshi.textColor = [UIColor darkGrayColor];
             CGFloat tipsHeight = [HWTools getTextHeightWithText:dict[@"tips"] bigestSize:CGSizeMake(365, 1000) font:15.0];
             UIView *view2 = [[UIView alloc]initWithFrame:CGRectMake(5, 20, 365, tipsHeight + 10)];
             view2.backgroundColor = kBackColor;
@@ -132,17 +223,27 @@ self.tableView.tableHeaderView = headerView;
             tipsLabel.numberOfLines = 0;
             tipsLabel.font = [UIFont systemFontOfSize:15.0];
             [view2 addSubview:tipsLabel];
-            footView.frame = CGRectMake(0, 0, kWidth, 30 + tipsHeight);
+            recommendLabel.frame = CGRectMake(15, 35 + tipsHeight, 200, 10);
+            recommendView.frame = CGRectMake(0, 50 + tipsHeight, kWidth, 366);
+            footView.frame = CGRectMake(0, 0, kWidth, 416 + tipsHeight);
             
             [footView addSubview:xiaotieshi];
             [footView addSubview:view2];
-            self.tableView.tableFooterView = footView;
-            
-
+        }else{
+            recommendLabel.frame = CGRectMake(15, 10, 200, 8);
+            recommendView.frame = CGRectMake(0, 25, kWidth,366);
+            footView.frame = CGRectMake(0, 0, kWidth,391);
         }
-        
+       
+        [footView addSubview:recommendLabel];
+        [footView addSubview:recommendView];
+      self.tableView.tableFooterView = footView;
            }
 
+}
+
+- (void)addSixButton{
+    
 }
 #pragma mark---UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -159,23 +260,33 @@ self.tableView.tableHeaderView = headerView;
 #pragma mark---UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     DetailsModel *model = self.modelArray[indexPath.row];
-    [HWTools getTextHeightWithText:model.name bigestSize:CGSizeMake(375, 1000) font:15];
-    CGFloat height;
-    if (height <= 100) {
-        return 100;
-    }else{
-        return height;
-    }
+     DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details"];
+    cell.contentLabel.text = model.name;
+    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    CGSize textViewSize = [cell.contentLabel sizeThatFits:CGSizeMake(cell.contentLabel.frame.size.width, FLT_MAX)];
+    CGFloat h = size.height + textViewSize.height;
+    h = h > 106 ? h : 106;  //106是图片显示的最低高度， 见xib
+    CGFloat height = cell.contentLabel.frame.size.height;
+    height = h;
+    return 10 + h;
+   }
+
+- (void)details:(UIButton *)btn{
+    DetailsViewController *details = [[DetailsViewController alloc]init];
+    details.idDetails  = self.recommendArray[btn.tag][@"id"];
+    details.title = self.recommendArray[btn.tag][@"name"];
+    [self.navigationController pushViewController:details animated:YES];
 }
 
 #pragma mark---懒加载
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeigth + 40
+        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeigth
                                                                       )];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-  
+  self.tableView.estimatedRowHeight = 200;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
     }
     return _tableView;
 }
@@ -184,6 +295,12 @@ self.tableView.tableHeaderView = headerView;
         self.modelArray = [NSMutableArray new];
     }
     return _modelArray;
+}
+- (NSMutableArray *)recommendArray{
+    if (_recommendArray == nil) {
+        self.recommendArray = [NSMutableArray new];
+    }
+    return _recommendArray;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

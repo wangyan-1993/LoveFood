@@ -35,7 +35,7 @@
                         <rect key="frame" x="352" y="36" width="9" height="13"/>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.97965604026845643" green="0.92431312919462982" blue="0.90184563758388936" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.97567415237426758" green="0.96170887406318195" blue="0.9076981379822141" alpha="0.98830818965517242" colorSpace="calibratedRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="blackImage" destination="44g-1N-1hA" id="5IV-jI-KbX"/>

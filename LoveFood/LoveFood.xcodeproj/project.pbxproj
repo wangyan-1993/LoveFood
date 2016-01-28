@@ -28,6 +28,7 @@
 		7A6B97F71C4CE96800885D9D /* find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F61C4CE96800885D9D /* find.storyboard */; };
 		7A6B97F91C4CE98800885D9D /* favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97F81C4CE98800885D9D /* favorite.storyboard */; };
 		7A6B97FB1C4CE9A900885D9D /* more.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A6B97FA1C4CE9A900885D9D /* more.storyboard */; };
+		7A76D6AD1C5885FC0023ECF2 /* RecomendList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A76D6AC1C5885FC0023ECF2 /* RecomendList.plist */; };
 		7A827CB11C4C9EC30076C419 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CB01C4C9EC30076C419 /* main.m */; };
 		7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CB31C4C9EC30076C419 /* AppDelegate.m */; };
 		7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A827CB51C4C9EC30076C419 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		7A6B97F61C4CE96800885D9D /* find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = find.storyboard; sourceTree = "<group>"; };
 		7A6B97F81C4CE98800885D9D /* favorite.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = favorite.storyboard; sourceTree = "<group>"; };
 		7A6B97FA1C4CE9A900885D9D /* more.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = more.storyboard; sourceTree = "<group>"; };
+		7A76D6AC1C5885FC0023ECF2 /* RecomendList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RecomendList.plist; sourceTree = "<group>"; };
 		7A827CAC1C4C9EC30076C419 /* LoveFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A827CB01C4C9EC30076C419 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A827CB21C4C9EC30076C419 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				7AF50D6E1C5729760060D662 /* DetailsModel.m */,
 				7A2364751C4E23C7005A0A3F /* Property List.plist */,
 				7ADC29301C52113900A91F23 /* DetailsList.plist */,
+				7A76D6AC1C5885FC0023ECF2 /* RecomendList.plist */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				7A2364761C4E23C7005A0A3F /* Property List.plist in Resources */,
 				7A067B4A1C4F7A2D009ADB8D /* blueArrowDown.png in Resources */,
 				7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */,
+				7A76D6AD1C5885FC0023ECF2 /* RecomendList.plist in Resources */,
 				7AF50D6C1C57280D0060D662 /* DetailsTableViewCell.xib in Resources */,
 				7A3B68141C507B9300508DB8 /* FavoriteTableViewCell.xib in Resources */,
 				7A827CB91C4C9EC30076C419 /* LaunchScreen.storyboard in Resources */,

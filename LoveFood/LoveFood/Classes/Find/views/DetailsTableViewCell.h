@@ -10,4 +10,5 @@
 #import "DetailsModel.h"
 @interface DetailsTableViewCell : UITableViewCell
 @property(nonatomic, retain) DetailsModel *model;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @end

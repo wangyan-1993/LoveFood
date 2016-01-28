@@ -9,7 +9,7 @@
 #import "DetailsTableViewCell.h"
 @interface DetailsTableViewCell()
 @property (weak, nonatomic) IBOutlet UILabel *numLabel;
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 
 @end
