@@ -14,7 +14,7 @@
     if (self) {
         self.name = dict[@"text"];
         self.image = dict[@"url"];
-        self.num = dict[@"step"];
+        self.num = [dict[@"step"] integerValue];
         
     }
     return self;

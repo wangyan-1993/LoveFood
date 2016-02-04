@@ -9,6 +9,7 @@
 #import "DetailsViewController.h"
 #import "DetailsTableViewCell.h"
 #import "DetailsModel.h"
+#import "ShareView.h"
 @interface DetailsViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     NSInteger i;
@@ -16,6 +17,7 @@
 @property(nonatomic, retain) UITableView *tableView;
 @property(nonatomic, retain) NSMutableArray *modelArray;
 @property(nonatomic, retain) NSMutableArray *recommendArray;
+@property(nonatomic, retain) ShareView  *shareView;
 @end
 
 @implementation DetailsViewController
@@ -23,7 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
- 
     self.tabBarController.tabBar.hidden = YES;
     [self showBackBtn];
     [self configData];
@@ -31,7 +32,18 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"DetailsTableViewCell" bundle:nil] forCellReuseIdentifier:@"Details"];
     [self.view addSubview:self.tableView];
     
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame = CGRectMake(0, kHeigth - 40, kWidth, 40);
+    button.backgroundColor =[UIColor orangeColor];
+    [button setTitle:@"分享" forState:UIControlStateNormal];
+    button.backgroundColor = kMainColor;
+    button.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [button addTarget:self action:@selector(shareButtonClickHandler:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
+    
 }
+
 - (void)configData{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
@@ -96,26 +108,6 @@
 
 }
 
-//- (void)configDataWithString:(NSString *)string{
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-//    NSString *str = [NSString stringWithFormat:@"%@%@", kTwoListData, string];
-//    [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSLog(@"%@", responseObject);
-//        NSDictionary *dictionary = responseObject;
-//        NSDictionary *dict = dictionary[@"xiachufang"];
-//        NSString *status = dict[@"@status"];
-//        if ([status isEqualToString:@"ok"]) {
-//            self.recommendArray = dict[@"recipe"];
-//           
-//        }
-//        [self.tableView reloadData];
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        NSLog(@"%@", error);
-//    }];
-//}
 - (void)configTableViewWithDic:(NSDictionary *)dic withArray:(NSMutableArray *)array{
     NSDictionary *xiachufangDic = dic[@"xiachufang"];
     NSString *status = xiachufangDic[@"@status"];
@@ -242,9 +234,6 @@
 
 }
 
-- (void)addSixButton{
-    
-}
 #pragma mark---UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details" forIndexPath:indexPath];
@@ -265,12 +254,12 @@
     CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     CGSize textViewSize = [cell.contentLabel sizeThatFits:CGSizeMake(cell.contentLabel.frame.size.width, FLT_MAX)];
     CGFloat h = size.height + textViewSize.height;
-    h = h > 106 ? h : 106;  //106是图片显示的最低高度， 见xib
+    h = h > 90 ? h : 90;  //90是图片显示的最低高度， 见xib
     CGFloat height = cell.contentLabel.frame.size.height;
     height = h;
     return 10 + h;
    }
-
+#pragma mark---button method
 - (void)details:(UIButton *)btn{
     DetailsViewController *details = [[DetailsViewController alloc]init];
     details.idDetails  = self.recommendArray[btn.tag][@"id"];
@@ -278,11 +267,18 @@
     [self.navigationController pushViewController:details animated:YES];
 }
 
+- (void)shareButtonClickHandler:(id)sender
+{
+    self.shareView = [[ShareView alloc]init];
+    
+}
+
+
+
 #pragma mark---懒加载
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeigth
-                                                                      )];
+        self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeigth-20)];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
   self.tableView.estimatedRowHeight = 200;

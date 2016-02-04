@@ -10,7 +10,7 @@
 
 @interface DetailsModel : NSObject
 @property(nonatomic, copy) NSString *name;
-@property(nonatomic, copy) NSString *num;
+@property(nonatomic, assign) NSInteger num;
 @property(nonatomic, copy) NSString *image;
 - (instancetype)initWithDictionary:(NSDictionary *)dic;
 

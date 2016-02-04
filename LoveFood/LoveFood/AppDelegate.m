@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+#import "WXApi.h"
+#import "WeiboSDK.h"
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -16,6 +19,34 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [ShareSDK registerApp:kShareAppKey activePlatforms:@[@(SSDKPlatformTypeWechat),@(SSDKPlatformTypeSinaWeibo)] onImport:^(SSDKPlatformType platformType) {
+        switch (platformType)
+                {
+                    case SSDKPlatformTypeWechat:
+                        //                             [ShareSDKConnector connectWeChat:[WXApi class]];
+                        [ShareSDKConnector connectWeChat:[WXApi class] delegate:self];
+                        break;
+                    case SSDKPlatformTypeSinaWeibo:
+                        [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+                        break;
+                }
+    } onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo) {
+        switch (platformType)
+        {
+            case SSDKPlatformTypeSinaWeibo:
+                //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                [appInfo SSDKSetupSinaWeiboByAppKey:@"2437667234"
+                                          appSecret:@"4093adfb18c9632434efb919a9e5cd80"
+                                        redirectUri:@"http://www.sharesdk.cn"
+                                           authType:SSDKAuthTypeBoth];
+                break;
+            case SSDKPlatformTypeWechat:
+                [appInfo SSDKSetupWeChatByAppId:@"wx0a8d313cd20e87dd"
+                                      appSecret:@"1c36faab342b33789f32f35ba4f85b35"];
+            break;}
+    }];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.tabBarVC = [[UITabBarController alloc]init];

@@ -8,7 +8,9 @@
 
 #import "MoreViewController.h"
 
+#import "ZhuceViewController.h"
 @interface MoreViewController ()
+
 
 @end
 
@@ -20,6 +22,7 @@
     self.navigationController.navigationBar.barTintColor = kMainColor;
 
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

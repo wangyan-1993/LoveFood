@@ -33,6 +33,11 @@
     [self.tableView launchRefreshing];
 
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 
 
 #pragma mark---UITableViewDataSource

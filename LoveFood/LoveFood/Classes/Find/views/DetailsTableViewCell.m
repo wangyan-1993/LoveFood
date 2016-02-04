@@ -19,7 +19,7 @@
     // Initialization code
 }
 - (void)setModel:(DetailsModel *)model{
-    self.numLabel.text = model.num;
+    self.numLabel.text = [NSString stringWithFormat:@"%lu", model.num + 1];
     self.contentLabel.text = model.name;
     self.contentLabel.numberOfLines = 0;
     [self.image sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:nil];
