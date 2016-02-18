@@ -122,16 +122,16 @@
         UIView *headerView = [[UIView alloc]init];
         UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kWidth, 220)];
         [image sd_setImageWithURL:[NSURL URLWithString:dict[@"photo"]] placeholderImage:nil];
-                 CGFloat labelHeight = [HWTools getTextHeightWithText: dict[@"summary"]
-                                                  bigestSize:CGSizeMake(365, 1000) font:15.0];
-        UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(5, 220 , 365, 10+ labelHeight + 20)];
+        CGFloat labelHeight = [HWTools getTextHeightWithText: dict[@"summary"]
+                                                  bigestSize:CGSizeMake(kWidth - 10, 1000) font:15.0];
+        UIView *view1 = [[UIView alloc]initWithFrame:CGRectMake(5, 220 , kWidth - 10, 10+ labelHeight + 20)];
         view1.backgroundColor = kBackColor;
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(5, 0, 365, labelHeight)];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(5, 0, kWidth - 10, labelHeight)];
         
         label.font = [UIFont systemFontOfSize:15.0];
-    label.text = dict[@"summary"];
+        label.text = dict[@"summary"];
         label.numberOfLines = 0;
-       
+        
         UILabel *nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(5, labelHeight + 10, 150, 20)];
         nameLabel.text = dict[@"author"][@"name"];
         nameLabel.textColor = [UIColor darkGrayColor];
@@ -155,19 +155,19 @@
             UIView *peiliaoLabel = [[UIView alloc]init];
             peiliaoLabel.backgroundColor = kBackColor;
             if (i % 2 == 0) {
-               peiliaoLabel.frame = CGRectMake(5 , 280+labelHeight + 52 * i / 2 , 182, 50);
+                peiliaoLabel.frame = CGRectMake(5 , 280+labelHeight + 52 * i / 2 , (kWidth-11)/2, 50);
             }else{
-                peiliaoLabel.frame = CGRectMake(189, 280+labelHeight + 52 * i / 2 - 26 , 182, 50);
+                peiliaoLabel.frame = CGRectMake((kWidth-11)/2 + 7, 280+labelHeight + 52 * i / 2 - 26 , (kWidth-11)/2, 50);
             }
-             UILabel *name = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, peiliaoLabel.frame.size.width / 4 * 3, 50)];
+            UILabel *name = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, peiliaoLabel.frame.size.width / 4 * 3, 50)];
             name.text = dictionary[@"name"];
             UILabel *height = [[UILabel alloc]initWithFrame:CGRectMake(peiliaoLabel.frame.size.width / 4 * 3, 0, peiliaoLabel.frame.size.width / 4 , 50)];
             height.text = dictionary[@"amount"];
             height.font = [UIFont systemFontOfSize:15];
             [peiliaoLabel addSubview:name];
             [peiliaoLabel addSubview:height];
-           
-           
+            
+            
             [headerView addSubview:peiliaoLabel];
         }
         
@@ -177,24 +177,24 @@
             headerView.frame = CGRectMake(0, 0, kWidth, 280 + labelHeight + 52 * (i / 2 + 1));
         }
         self.tableView.tableHeaderView = headerView;
-       
+        
 #pragma mark---footview
-         UIView *footView = [[UIView alloc]init];
-         UILabel *recommendLabel = [[UILabel alloc]init];
+        UIView *footView = [[UIView alloc]init];
+        UILabel *recommendLabel = [[UILabel alloc]init];
         recommendLabel.text = @"喜欢这个的吃货也喜欢";
         recommendLabel.font = [UIFont systemFontOfSize:15];
         recommendLabel.textColor = [UIColor darkGrayColor];
         UIView *recommendView = [[UIView alloc]init];
         for (int j = 0; j < 6; j ++) {
             UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-            button.frame = CGRectMake(5+ (j%2) * 184, 5 + j / 2 * 122, 181 , 119);
+            button.frame = CGRectMake(5+ (j%2) * ((kWidth-13)/2 + 3), 5 + j / 2 * 122, (kWidth-13)/2 , 119);
             button.backgroundColor = kBackColor;
             button.tag = j;
             [button addTarget:self action:@selector(details:) forControlEvents:UIControlEventTouchUpInside];
-            UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, 172, 90)];
+            UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, (kWidth-13)/2 - 10, 90)];
             [image sd_setImageWithURL:[NSURL URLWithString:array[j][@"photo"]] placeholderImage:nil];
             [button addSubview:image];
-            UILabel *recommendName = [[UILabel alloc]initWithFrame:CGRectMake(5, 100, 172, 20)];
+            UILabel *recommendName = [[UILabel alloc]initWithFrame:CGRectMake(5, 100, (kWidth-13)/2 - 10, 20)];
             recommendName.text = array[j][@"name"];
             recommendName.font = [UIFont systemFontOfSize:15];
             [button addSubview:recommendName];
@@ -207,10 +207,10 @@
             UILabel *xiaotieshi = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, kWidth - 30, 10)];
             xiaotieshi.text = @"小贴士";
             xiaotieshi.textColor = [UIColor darkGrayColor];
-            CGFloat tipsHeight = [HWTools getTextHeightWithText:dict[@"tips"] bigestSize:CGSizeMake(365, 1000) font:15.0];
-            UIView *view2 = [[UIView alloc]initWithFrame:CGRectMake(5, 20, 365, tipsHeight + 10)];
+            CGFloat tipsHeight = [HWTools getTextHeightWithText:dict[@"tips"] bigestSize:CGSizeMake(kWidth - 10, 1000) font:15.0];
+            UIView *view2 = [[UIView alloc]initWithFrame:CGRectMake(5, 20, kWidth - 10, tipsHeight + 10)];
             view2.backgroundColor = kBackColor;
-            UILabel *tipsLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 5, 365, tipsHeight)];
+            UILabel *tipsLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 5, kWidth - 10, tipsHeight)];
             tipsLabel.text = dict[@"tips"];
             tipsLabel.numberOfLines = 0;
             tipsLabel.font = [UIFont systemFontOfSize:15.0];
@@ -226,14 +226,13 @@
             recommendView.frame = CGRectMake(0, 25, kWidth,366);
             footView.frame = CGRectMake(0, 0, kWidth,391);
         }
-       
+        
         [footView addSubview:recommendLabel];
         [footView addSubview:recommendView];
-      self.tableView.tableFooterView = footView;
-           }
-
+        self.tableView.tableFooterView = footView;
+    }
+    
 }
-
 #pragma mark---UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details" forIndexPath:indexPath];
