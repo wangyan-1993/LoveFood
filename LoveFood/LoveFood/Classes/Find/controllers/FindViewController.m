@@ -10,8 +10,8 @@
 #import "FindModel.h"
 #import "FindTableViewCell.h"
 #import "ListViewController.h"
-
-@interface FindViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+#import "MoreViewController.h"
+@interface FindViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UIAlertViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *array;
 @property(nonatomic, strong) UISearchBar *mySearchBar;
@@ -64,14 +64,21 @@
             }
         }
         [self.tableView reloadData];
-        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"登陆后会有更多惊喜呦 >_<" delegate:self cancelButtonTitle:@"暂不登录" otherButtonTitles:@"立即登录", nil];
+        [alert show];
+
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
 
 }
-
+#pragma mark---UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        self.tabBarController.selectedIndex = 2;
+    }
+}
 #pragma mark---UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.array.count;

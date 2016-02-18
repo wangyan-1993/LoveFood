@@ -8,7 +8,7 @@
         <!--More View Controller-->
         <scene sceneID="BVm-sF-ydl">
             <objects>
-                <viewController id="VVi-Hx-lyt" customClass="MoreViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="moremore" id="VVi-Hx-lyt" customClass="MoreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e2M-Id-gyS"/>
                         <viewControllerLayoutGuide type="bottom" id="Ldt-Gh-gs2"/>
