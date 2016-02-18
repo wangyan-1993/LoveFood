@@ -11,6 +11,8 @@
 #import <ShareSDKConnector/ShareSDKConnector.h>
 #import "WXApi.h"
 #import "WeiboSDK.h"
+#import <SMS_SDK/SMSSDK.h>
+#import <BmobSDK/Bmob.h>
 @interface AppDelegate ()<WXApiDelegate>
 
 @end
@@ -19,7 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [SMSSDK registerApp:@"f5da6a78149c" withSecret:@"bc33316dd59a6f9a209cfa5ae42f9417"];
+    [Bmob registerWithAppKey:kBMOBAppID];
     [ShareSDK registerApp:kShareAppKey activePlatforms:@[@(SSDKPlatformTypeWechat),@(SSDKPlatformTypeSinaWeibo)] onImport:^(SSDKPlatformType platformType) {
         switch (platformType)
                 {

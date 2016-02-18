@@ -19,7 +19,7 @@
 
 #define kShareAppKey @"f38944028e3e"
 #define kShareAppSecret @"38cf67b447035237cf1516aa02dd4147"
-
+#define kBMOBAppID @"a60a9e5be8fa63ba01927e25e032e56c"
 
 
 #endif /* Header_h */

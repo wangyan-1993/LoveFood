@@ -7,10 +7,17 @@
 //
 
 #import "MoreViewController.h"
-
 #import "ZhuceViewController.h"
+#import "ForgetCodeViewController.h"
+#import "InfomationViewController.h"
+#import <BmobSDK/Bmob.h>
 @interface MoreViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UITextField *secret;
+@property (weak, nonatomic) IBOutlet UIButton *login;
 
+@property (weak, nonatomic) IBOutlet UIButton *zhuce;
+@property (weak, nonatomic) IBOutlet UIButton *forget;
 
 @end
 
@@ -19,11 +26,70 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"更多";
     self.navigationController.navigationBar.barTintColor = kMainColor;
+    self.secret.secureTextEntry = YES;
+    self.secret.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    self.secret.clearButtonMode = UITextFieldViewModeUnlessEditing;
+    self.name.keyboardType = UIKeyboardTypeEmailAddress;
+    self.name.clearButtonMode = UITextFieldViewModeUnlessEditing;
+    self.login.backgroundColor = [UIColor darkGrayColor];
+    self.login.layer.cornerRadius = 5;
+    self.login.clipsToBounds = YES;
+    
+    self.zhuce.backgroundColor = [UIColor darkGrayColor];
+    self.zhuce.layer.cornerRadius = 5;
+    self.zhuce.clipsToBounds = YES;
 
+    
+    self.forget.backgroundColor = [UIColor darkGrayColor];
+    self.forget.layer.cornerRadius = 5;
+    self.forget.clipsToBounds = YES;
+
+   
 }
 
+- (IBAction)login:(id)sender {
+    
+    BmobQuery *query = [BmobQuery queryWithClassName:@"UserInfo"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (!error) {
+            
+        for (BmobObject *obj in array) {
+            if ([[obj objectForKey:@"phoneNum"] isEqualToString:self.name.text] && [[obj objectForKey:@"code"]isEqualToString:self.secret.text]) {
+                InfomationViewController *infoVC = [[InfomationViewController alloc]init];
+                [self.navigationController pushViewController:infoVC animated:YES];
+            }else{
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"用户名或密码填写不正确" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
 
+            }
+        }}else{
+            NSLog(@"%@", error);
+        }
+    }];
+    
+
+}
+- (IBAction)zhuce:(id)sender {
+    
+    UIStoryboard *moreStoryBoard = [UIStoryboard storyboardWithName:@"more" bundle:nil];
+
+    ZhuceViewController *zhuce = [moreStoryBoard instantiateViewControllerWithIdentifier:@"zhuce"];
+    [self.navigationController pushViewController:zhuce animated:YES];
+}
+- (IBAction)findSecret:(id)sender {
+    UIStoryboard *moreStoryBoard = [UIStoryboard storyboardWithName:@"more" bundle:nil];
+    
+    ForgetCodeViewController *forget = [moreStoryBoard instantiateViewControllerWithIdentifier:@"forget"];
+    [self.navigationController pushViewController:forget animated:YES];
+    
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.secret resignFirstResponder];
+    [self.name resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

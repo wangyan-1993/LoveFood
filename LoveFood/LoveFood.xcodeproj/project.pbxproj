@@ -73,6 +73,23 @@
 		7ADC29311C52113900A91F23 /* DetailsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADC29301C52113900A91F23 /* DetailsList.plist */; };
 		7ADC29341C52139500A91F23 /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC29331C52139500A91F23 /* HWTools.m */; };
 		7ADD23AD1C63456000239382 /* more.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD23AC1C63456000239382 /* more.storyboard */; };
+		7AE6B6511C647A88006E37AC /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AE6B64C1C647A88006E37AC /* SMS_SDKLocalizable.strings */; };
+		7AE6B6521C647A88006E37AC /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B64E1C647A88006E37AC /* MOBFoundation.framework */; };
+		7AE6B6531C647A88006E37AC /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B64F1C647A88006E37AC /* SMS_SDK.framework */; };
+		7AE6B6551C647AD7006E37AC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6541C647AD7006E37AC /* libz.tbd */; };
+		7AE6B6571C647AF5006E37AC /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6561C647AF5006E37AC /* JavaScriptCore.framework */; };
+		7AE6B6591C647B03006E37AC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6581C647B03006E37AC /* libstdc++.tbd */; };
+		7AE6B65C1C647B15006E37AC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B65A1C647B15006E37AC /* AddressBook.framework */; };
+		7AE6B65D1C647B15006E37AC /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B65B1C647B15006E37AC /* AddressBookUI.framework */; };
+		7AE6B6601C648557006E37AC /* ForgetCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6B65F1C648557006E37AC /* ForgetCodeViewController.m */; };
+		7AE6B6621C64905F006E37AC /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6611C64905F006E37AC /* BmobSDK.framework */; };
+		7AE6B6641C6490C3006E37AC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6631C6490C3006E37AC /* CoreLocation.framework */; };
+		7AE6B6661C649102006E37AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6651C649102006E37AC /* CoreGraphics.framework */; };
+		7AE6B6681C64912A006E37AC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6671C64912A006E37AC /* MobileCoreServices.framework */; };
+		7AE6B66A1C64913B006E37AC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B6691C64913B006E37AC /* CFNetwork.framework */; };
+		7AE6B66C1C64917D006E37AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B66B1C64917D006E37AC /* AVFoundation.framework */; };
+		7AE6B66E1C649185006E37AC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B66D1C649185006E37AC /* MediaPlayer.framework */; };
+		7AE6B6711C649FC4006E37AC /* InfomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6B6701C649FC4006E37AC /* InfomationViewController.m */; };
 		7AF50D6B1C57280D0060D662 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */; };
 		7AF50D6C1C57280D0060D662 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */; };
 		7AF50D6F1C5729760060D662 /* DetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D6E1C5729760060D662 /* DetailsModel.m */; };
@@ -185,6 +202,26 @@
 		7ADC29321C52139500A91F23 /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTools.h; sourceTree = "<group>"; };
 		7ADC29331C52139500A91F23 /* HWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWTools.m; sourceTree = "<group>"; };
 		7ADD23AC1C63456000239382 /* more.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = more.storyboard; sourceTree = "<group>"; };
+		7AE6B64D1C647A88006E37AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		7AE6B64E1C647A88006E37AC /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		7AE6B64F1C647A88006E37AC /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		7AE6B6501C647A88006E37AC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		7AE6B6541C647AD7006E37AC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7AE6B6561C647AF5006E37AC /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7AE6B6581C647B03006E37AC /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		7AE6B65A1C647B15006E37AC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		7AE6B65B1C647B15006E37AC /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		7AE6B65E1C648557006E37AC /* ForgetCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetCodeViewController.h; sourceTree = "<group>"; };
+		7AE6B65F1C648557006E37AC /* ForgetCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetCodeViewController.m; sourceTree = "<group>"; };
+		7AE6B6611C64905F006E37AC /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		7AE6B6631C6490C3006E37AC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7AE6B6651C649102006E37AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7AE6B6671C64912A006E37AC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7AE6B6691C64913B006E37AC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7AE6B66B1C64917D006E37AC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7AE6B66D1C649185006E37AC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7AE6B66F1C649FC4006E37AC /* InfomationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfomationViewController.h; sourceTree = "<group>"; };
+		7AE6B6701C649FC4006E37AC /* InfomationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfomationViewController.m; sourceTree = "<group>"; };
 		7AF50D681C57280D0060D662 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
 		7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
 		7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
@@ -198,14 +235,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE6B66E1C649185006E37AC /* MediaPlayer.framework in Frameworks */,
+				7AE6B66C1C64917D006E37AC /* AVFoundation.framework in Frameworks */,
+				7AE6B66A1C64913B006E37AC /* CFNetwork.framework in Frameworks */,
+				7AE6B6681C64912A006E37AC /* MobileCoreServices.framework in Frameworks */,
+				7AE6B6661C649102006E37AC /* CoreGraphics.framework in Frameworks */,
+				7AC71C561C59DDAB0019F8C3 /* Security.framework in Frameworks */,
+				7AE6B6641C6490C3006E37AC /* CoreLocation.framework in Frameworks */,
+				7AE6B65C1C647B15006E37AC /* AddressBook.framework in Frameworks */,
+				7AE6B65D1C647B15006E37AC /* AddressBookUI.framework in Frameworks */,
+				7AE6B6591C647B03006E37AC /* libstdc++.tbd in Frameworks */,
+				7AE6B6571C647AF5006E37AC /* JavaScriptCore.framework in Frameworks */,
+				7AE6B6551C647AD7006E37AC /* libz.tbd in Frameworks */,
 				7AC71C601C59E7370019F8C3 /* libc++.tbd in Frameworks */,
 				7AC71C5E1C59DFCC0019F8C3 /* AdSupport.framework in Frameworks */,
 				7AC71C5C1C59DFC10019F8C3 /* ImageIO.framework in Frameworks */,
 				7AC71C5A1C59DFB70019F8C3 /* libsqlite3.tbd in Frameworks */,
 				7AC71C581C59DDBC0019F8C3 /* MessageUI.framework in Frameworks */,
-				7AC71C561C59DDAB0019F8C3 /* Security.framework in Frameworks */,
 				7AC71C541C59DD9F0019F8C3 /* libz.1.2.5.tbd in Frameworks */,
 				7AC71C521C59DD930019F8C3 /* libicucore.tbd in Frameworks */,
+				7AE6B6621C64905F006E37AC /* BmobSDK.framework in Frameworks */,
 				7AC71C501C59DD820019F8C3 /* CoreTelephony.framework in Frameworks */,
 				7AC71C4E1C59DD760019F8C3 /* QuartzCore.framework in Frameworks */,
 				7AC71C4C1C59DD6A0019F8C3 /* SystemConfiguration.framework in Frameworks */,
@@ -222,6 +271,8 @@
 				7AC71C361C59DCB50019F8C3 /* ShareSDK.framework in Frameworks */,
 				7AC71C3E1C59DCB50019F8C3 /* KakaoOpenSDK.framework in Frameworks */,
 				7AC71C371C59DCB50019F8C3 /* ShareSDKExtension.framework in Frameworks */,
+				7AE6B6521C647A88006E37AC /* MOBFoundation.framework in Frameworks */,
+				7AE6B6531C647A88006E37AC /* SMS_SDK.framework in Frameworks */,
 				7AC71C421C59DCB50019F8C3 /* RennSDK.framework in Frameworks */,
 				7AC71C3D1C59DCB50019F8C3 /* FBSDKMessengerShareKit.framework in Frameworks */,
 			);
@@ -415,6 +466,10 @@
 				7A827CED1C4CACDE0076C419 /* MoreViewController.m */,
 				7A4060791C606A6300956EC6 /* ZhuceViewController.h */,
 				7A40607A1C606A6300956EC6 /* ZhuceViewController.m */,
+				7AE6B65E1C648557006E37AC /* ForgetCodeViewController.h */,
+				7AE6B65F1C648557006E37AC /* ForgetCodeViewController.m */,
+				7AE6B66F1C649FC4006E37AC /* InfomationViewController.h */,
+				7AE6B6701C649FC4006E37AC /* InfomationViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -437,6 +492,8 @@
 		7A827CF31C4CACEF0076C419 /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
+				7AE6B6611C64905F006E37AC /* BmobSDK.framework */,
+				7AE6B64B1C647A88006E37AC /* SMS_SDK */,
 				7AC71C021C59DCB50019F8C3 /* ShareSDK */,
 				7A067B4C1C4F7A95009ADB8D /* ProgressHUD */,
 				7A067B441C4F7A2D009ADB8D /* PullingRefreshTableView */,
@@ -593,9 +650,30 @@
 			path = Required;
 			sourceTree = "<group>";
 		};
+		7AE6B64B1C647A88006E37AC /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				7AE6B64C1C647A88006E37AC /* SMS_SDKLocalizable.strings */,
+				7AE6B64E1C647A88006E37AC /* MOBFoundation.framework */,
+				7AE6B64F1C647A88006E37AC /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
 		D0D9E5A51AA281ACB0FA488D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AE6B66D1C649185006E37AC /* MediaPlayer.framework */,
+				7AE6B66B1C64917D006E37AC /* AVFoundation.framework */,
+				7AE6B6691C64913B006E37AC /* CFNetwork.framework */,
+				7AE6B6671C64912A006E37AC /* MobileCoreServices.framework */,
+				7AE6B6651C649102006E37AC /* CoreGraphics.framework */,
+				7AE6B6631C6490C3006E37AC /* CoreLocation.framework */,
+				7AE6B65A1C647B15006E37AC /* AddressBook.framework */,
+				7AE6B65B1C647B15006E37AC /* AddressBookUI.framework */,
+				7AE6B6581C647B03006E37AC /* libstdc++.tbd */,
+				7AE6B6561C647AF5006E37AC /* JavaScriptCore.framework */,
+				7AE6B6541C647AD7006E37AC /* libz.tbd */,
 				7AC71C5F1C59E7370019F8C3 /* libc++.tbd */,
 				7AC71C5D1C59DFCC0019F8C3 /* AdSupport.framework */,
 				7AC71C5B1C59DFC10019F8C3 /* ImageIO.framework */,
@@ -666,6 +744,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 7A827CA31C4C9EC30076C419;
 			productRefGroup = 7A827CAD1C4C9EC30076C419 /* Products */;
@@ -682,6 +761,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE6B6511C647A88006E37AC /* SMS_SDKLocalizable.strings in Resources */,
 				7A2364711C4E1AD1005A0A3F /* FindTableViewCell.xib in Resources */,
 				7A067B561C4F7F83009ADB8D /* ListTableViewCell.xib in Resources */,
 				7A2364761C4E23C7005A0A3F /* Property List.plist in Resources */,
@@ -764,12 +844,14 @@
 			files = (
 				7A067B4B1C4F7A2D009ADB8D /* PullingRefreshTableView.m in Sources */,
 				7A2364741C4E1E95005A0A3F /* FindModel.m in Sources */,
+				7AE6B6711C649FC4006E37AC /* InfomationViewController.m in Sources */,
 				7A2364701C4E1AD1005A0A3F /* FindTableViewCell.m in Sources */,
 				7A2364791C4E2CBA005A0A3F /* ListViewController.m in Sources */,
 				7ADC29341C52139500A91F23 /* HWTools.m in Sources */,
 				7A067B591C4F7FA0009ADB8D /* ListModel.m in Sources */,
 				7A827CF01C4CACDE0076C419 /* FavoriteViewController.m in Sources */,
 				7ADC292F1C51DE3A00A91F23 /* DetailsViewController.m in Sources */,
+				7AE6B6601C648557006E37AC /* ForgetCodeViewController.m in Sources */,
 				7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */,
 				7A067B511C4F7A95009ADB8D /* ProgressHUD.m in Sources */,
 				7A827CB11C4C9EC30076C419 /* main.m in Sources */,
@@ -795,6 +877,15 @@
 				7A827CB81C4C9EC30076C419 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7AE6B64C1C647A88006E37AC /* SMS_SDKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7AE6B64D1C647A88006E37AC /* en */,
+				7AE6B6501C647A88006E37AC /* zh-Hans */,
+			);
+			name = SMS_SDKLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -894,6 +985,8 @@
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/LoveFood/Librarys/SMS_SDK",
+					"$(PROJECT_DIR)/LoveFood/Librarys",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LoveFood/LoveFood.pch";
@@ -926,6 +1019,8 @@
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK/Support/PlatformSDK/RenRenSDK",
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/LoveFood/Librarys/SMS_SDK",
+					"$(PROJECT_DIR)/LoveFood/Librarys",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LoveFood/LoveFood.pch";
