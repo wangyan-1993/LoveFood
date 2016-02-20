@@ -252,11 +252,13 @@
     cell.contentLabel.text = model.name;
     CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     CGSize textViewSize = [cell.contentLabel sizeThatFits:CGSizeMake(cell.contentLabel.frame.size.width, FLT_MAX)];
+    
     CGFloat h = size.height + textViewSize.height;
+    
     h = h > 90 ? h : 90;  //90是图片显示的最低高度， 见xib
     CGFloat height = cell.contentLabel.frame.size.height;
     height = h;
-    return 10 + h;
+    return 15+ h;
    }
 #pragma mark---button method
 - (void)details:(UIButton *)btn{
