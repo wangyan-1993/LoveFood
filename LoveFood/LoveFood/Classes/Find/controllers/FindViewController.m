@@ -88,7 +88,7 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.model = self.array[indexPath.row];
-    cell.numLabel.text = [NSString stringWithFormat:@"%lu", indexPath.row + 1];
+    cell.numLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row + 1];
     return cell;
 }
 #pragma msrk---UITableViewDelegate

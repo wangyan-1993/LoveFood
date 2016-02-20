@@ -39,7 +39,7 @@
 - (void)configData{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    NSString *string = [NSString stringWithFormat:@"%@%@&offset=%lu", kListData, self.name, _pageCount * 9];
+    NSString *string = [NSString stringWithFormat:@"%@%@&offset=%ld", kListData, self.name, _pageCount * 9];
     NSString *url = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         // NSLog(@"%@", downloadProgress);
