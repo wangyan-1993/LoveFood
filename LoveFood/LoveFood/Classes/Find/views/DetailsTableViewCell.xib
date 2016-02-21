@@ -28,14 +28,17 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-QU-paj">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-QU-paj">
                         <rect key="frame" x="286" y="14" width="83" height="71"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="71" id="cIb-PF-mwD"/>
+                            <constraint firstAttribute="width" constant="83" id="y0Q-Fm-deJ"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pPE-QU-paj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="QY4-hK-M0a"/>
                     <constraint firstItem="pPE-QU-paj" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gK4-fu-UE5"/>
-                    <constraint firstItem="pPE-QU-paj" firstAttribute="leading" secondItem="yFz-cO-oR3" secondAttribute="trailing" constant="21" id="irp-jR-2BI"/>
                     <constraint firstItem="yFz-cO-oR3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="vhY-78-rD2"/>
                 </constraints>
             </tableViewCellContentView>
