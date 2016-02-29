@@ -50,24 +50,29 @@
 }
 
 - (IBAction)login:(id)sender {
-    
+    [self.secret resignFirstResponder];
+    [self.name resignFirstResponder];
     BmobQuery *query = [BmobQuery queryWithClassName:@"UserInfo"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
         if (!error) {
             
-        for (BmobObject *obj in array) {
-            if ([[obj objectForKey:@"phoneNum"] isEqualToString:self.name.text] && [[obj objectForKey:@"code"]isEqualToString:self.secret.text]) {
-                InfomationViewController *infoVC = [[InfomationViewController alloc]init];
-                [self.navigationController pushViewController:infoVC animated:YES];
-            }else{
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"用户名或密码填写不正确" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                [alert show];
-
+            for (BmobObject *obj in array) {
+                if ([[obj objectForKey:@"phoneNum"] isEqualToString:self.name.text] && [[obj objectForKey:@"code"]isEqualToString:self.secret.text]) {
+                    InfomationViewController *infoVC = [[InfomationViewController alloc]init];
+                    [self.navigationController pushViewController:infoVC animated:YES];
+                    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+                    
+                    delegate.isLogin=YES;
+                }else{
+                    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"用户名或密码填写不正确" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alert show];
+                    
+                }
+            }}else{
+                NSLog(@"%@", error);
             }
-        }}else{
-            NSLog(@"%@", error);
-        }
     }];
+    
     
 
 }
@@ -87,6 +92,13 @@
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.secret resignFirstResponder];
+    [self.name resignFirstResponder];
+}
+- (void)viewWillAppear:(BOOL)animated{
+    self.secret.text = nil;
+    self.name.text = nil;
+    
     [self.secret resignFirstResponder];
     [self.name resignFirstResponder];
 }

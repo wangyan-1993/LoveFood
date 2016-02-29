@@ -26,6 +26,9 @@
     [self.image sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:nil];
     self.name.text = model.name;
     self.peiliao.text = model.peiliao;
+    if (kWidth < 375) {
+        self.done.hidden = YES;
+    }
     self.done.text = [NSString stringWithFormat:@"%@ 做过", model.cooked];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
