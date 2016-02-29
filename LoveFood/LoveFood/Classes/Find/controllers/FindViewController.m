@@ -37,6 +37,9 @@
     self.mySearchBar.placeholder = @"搜索菜谱";
     [self.view addSubview:self.tableView];
     [self configData];
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    
+    delegate.isLogin=NO;
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -78,6 +81,7 @@
     if (buttonIndex == 1) {
         self.tabBarController.selectedIndex = 2;
     }
+   
 }
 #pragma mark---UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

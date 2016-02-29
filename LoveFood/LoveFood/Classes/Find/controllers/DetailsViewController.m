@@ -10,7 +10,9 @@
 #import "DetailsTableViewCell.h"
 #import "DetailsModel.h"
 #import "ShareView.h"
-@interface DetailsViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+
+@interface DetailsViewController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 {
     NSInteger i;
 }
@@ -136,8 +138,9 @@
         nameLabel.text = dict[@"author"][@"name"];
         nameLabel.textColor = [UIColor darkGrayColor];
         nameLabel.font = [UIFont systemFontOfSize:14];
-        UILabel *doneLabel = [[UILabel alloc]initWithFrame:CGRectMake(220, labelHeight + 10, kWidth - 220 - 5, 20)];
+        UILabel *doneLabel = [[UILabel alloc]initWithFrame:CGRectMake(160, labelHeight + 10, kWidth - 160-10, 20)];
         doneLabel.text = [NSString stringWithFormat:@"%@做过 %@收藏", dict[@"stats"][@"n_cooked"], dict[@"stats"][@"n_collects"]];
+        doneLabel.textAlignment = NSTextAlignmentRight;
         doneLabel.font = [UIFont systemFontOfSize:14];
         doneLabel.textColor = [UIColor orangeColor];
         
@@ -159,11 +162,15 @@
             }else{
                 peiliaoLabel.frame = CGRectMake((kWidth-11)/2 + 7, 280+labelHeight + 52 * i / 2 - 26 , (kWidth-11)/2, 50);
             }
-            UILabel *name = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, peiliaoLabel.frame.size.width / 4 * 3, 50)];
+            UILabel *name = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, peiliaoLabel.frame.size.width / 4 * 2, 50)];
             name.text = dictionary[@"name"];
-            UILabel *height = [[UILabel alloc]initWithFrame:CGRectMake(peiliaoLabel.frame.size.width / 4 * 3, 0, peiliaoLabel.frame.size.width / 4 , 50)];
+            UILabel *height = [[UILabel alloc]initWithFrame:CGRectMake(peiliaoLabel.frame.size.width / 4 * 2, 0, peiliaoLabel.frame.size.width / 2 -5, 50)];
             height.text = dictionary[@"amount"];
             height.font = [UIFont systemFontOfSize:15];
+            height.textAlignment = NSTextAlignmentRight;
+            if (kWidth<375) {
+                height.font = [UIFont systemFontOfSize:13];
+            }
             [peiliaoLabel addSubview:name];
             [peiliaoLabel addSubview:height];
             
@@ -269,13 +276,25 @@
 }
 
 - (void)shareButtonClickHandler:(id)sender
-{
-    self.shareView = [[ShareView alloc]init];
+{ AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     
+    
+        if (delegate.isLogin==NO) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"分享之前请先登录" delegate:self cancelButtonTitle:@"暂不登录" otherButtonTitles:@"立即登录", nil];
+        [alert show];
+        
+    }else{
+        self.shareView = [[ShareView alloc]init];
+ 
+    }
 }
 
-
-
+#pragma mark---UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        self.tabBarController.selectedIndex = 2;
+    }
+}
 #pragma mark---懒加载
 - (UITableView *)tableView{
     if (_tableView == nil) {

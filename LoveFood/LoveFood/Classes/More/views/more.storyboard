@@ -24,30 +24,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jd-A0-81F">
-                                <rect key="frame" x="59" y="240" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="Ypz-kJ-GzR"/>
-                                </constraints>
-                                <state key="normal" title="登录">
-                                    <color key="titleColor" red="0.05839788169" green="0.86719977859999997" blue="0.85908955340000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="login:" destination="VVi-Hx-lyt" eventType="touchUpInside" id="mPp-9t-UxW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-Ev-yeH">
-                                <rect key="frame" x="145" y="240" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="sRH-uS-9l5"/>
-                                </constraints>
-                                <state key="normal" title="注册">
-                                    <color key="titleColor" red="0.05839788169" green="0.86719977859999997" blue="0.85908955340000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="zhuce:" destination="VVi-Hx-lyt" eventType="touchUpInside" id="T8U-0S-6bg"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号/邮箱号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F1-kp-ziV">
                                 <rect key="frame" x="134" y="139" width="181" height="30"/>
                                 <color key="textColor" red="0.05839788169" green="0.86719977859999997" blue="0.85908955340000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,18 +36,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y25-Si-XIS">
-                                <rect key="frame" x="242" y="240" width="78" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="u5x-6F-7zm"/>
-                                </constraints>
-                                <state key="normal" title="忘记密码">
-                                    <color key="titleColor" red="0.05839788169" green="0.86719977859999997" blue="0.85908955340000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="findSecret:" destination="VVi-Hx-lyt" eventType="touchUpInside" id="S1I-uD-0kv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FW0-wf-nME">
                                 <rect key="frame" x="59" y="190" width="44" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -84,19 +48,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="N5S-iu-5wl" secondAttribute="trailing" constant="40" id="7sc-GR-oBn"/>
                             <constraint firstItem="9F1-kp-ziV" firstAttribute="leading" secondItem="xbg-LV-dLm" secondAttribute="trailing" constant="31" id="8xf-Qv-P2N"/>
                             <constraint firstItem="N5S-iu-5wl" firstAttribute="leading" secondItem="FW0-wf-nME" secondAttribute="trailing" constant="31" id="CuB-y7-KFI"/>
-                            <constraint firstItem="y25-Si-XIS" firstAttribute="leading" secondItem="PSX-Ev-yeH" secondAttribute="trailing" constant="30" id="eOc-N1-wpv"/>
-                            <constraint firstItem="PSX-Ev-yeH" firstAttribute="leading" secondItem="3Jd-A0-81F" secondAttribute="trailing" constant="30" id="jzZ-bW-kL9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9F1-kp-ziV" secondAttribute="trailing" constant="40" id="wqi-bp-nz1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rFR-wW-54n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="forget" destination="y25-Si-XIS" id="6qQ-c8-T0A"/>
-                        <outlet property="login" destination="3Jd-A0-81F" id="6Ax-aE-lEx"/>
                         <outlet property="name" destination="9F1-kp-ziV" id="pZa-QX-MmZ"/>
                         <outlet property="secret" destination="N5S-iu-5wl" id="wsG-hp-Rja"/>
-                        <outlet property="zhuce" destination="PSX-Ev-yeH" id="0UH-4s-zor"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgQ-mY-xa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
