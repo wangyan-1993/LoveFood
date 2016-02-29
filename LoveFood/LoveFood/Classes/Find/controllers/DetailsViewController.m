@@ -266,7 +266,11 @@
     CGFloat height = cell.contentLabel.frame.size.height;
     height = h;
     return 15+ h;
+<<<<<<< HEAD
 }
+=======
+   }
+>>>>>>> af95301cdf8415c5582bad8f7d91aa01f4e115cf
 #pragma mark---button method
 - (void)details:(UIButton *)btn{
     DetailsViewController *details = [[DetailsViewController alloc]init];
@@ -279,13 +283,21 @@
 { AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     
+<<<<<<< HEAD
     if (delegate.isLogin==NO) {
+=======
+        if (delegate.isLogin==NO) {
+>>>>>>> af95301cdf8415c5582bad8f7d91aa01f4e115cf
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"分享之前请先登录" delegate:self cancelButtonTitle:@"暂不登录" otherButtonTitles:@"立即登录", nil];
         [alert show];
         
     }else{
         self.shareView = [[ShareView alloc]init];
+<<<<<<< HEAD
         
+=======
+ 
+>>>>>>> af95301cdf8415c5582bad8f7d91aa01f4e115cf
     }
 }
 

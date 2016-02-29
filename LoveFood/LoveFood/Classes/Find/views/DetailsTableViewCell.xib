@@ -22,18 +22,24 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-QU-paj">
-                        <rect key="frame" x="279" y="14" width="83" height="71"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="yFz-cO-oR3">
-                        <rect key="frame" x="50" y="2" width="215" height="83"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="yFz-cO-oR3">
+                        <rect key="frame" x="50" y="2" width="215" height="96"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pPE-QU-paj">
+                        <rect key="frame" x="286" y="14" width="83" height="71"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="71" id="cIb-PF-mwD"/>
+                            <constraint firstAttribute="width" constant="83" id="y0Q-Fm-deJ"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="yFz-cO-oR3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="xKy-Zf-096"/>
+                    <constraint firstItem="pPE-QU-paj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="QY4-hK-M0a"/>
+                    <constraint firstItem="pPE-QU-paj" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="gK4-fu-UE5"/>
+                    <constraint firstItem="yFz-cO-oR3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="vhY-78-rD2"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
