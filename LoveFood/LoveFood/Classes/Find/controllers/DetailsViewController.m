@@ -10,8 +10,6 @@
 #import "DetailsTableViewCell.h"
 #import "DetailsModel.h"
 #import "ShareView.h"
-
-
 @interface DetailsViewController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 {
     NSInteger i;
@@ -42,14 +40,14 @@
     button.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [button addTarget:self action:@selector(shareButtonClickHandler:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
+
     
 }
 
 - (void)configData{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    NSString *str1 = [NSString stringWithFormat:@"%@%@", kRecommendData, self.idDetails];
+        NSString *str1 = [NSString stringWithFormat:@"%@%@", kRecommendData, self.idDetails];
     [manager GET:str1 parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -60,12 +58,12 @@
         if ([status isEqualToString:@"ok"]) {
             NSString *str = dict[@"recipe_ids"];
             str = [str stringByReplacingOccurrencesOfString:@":" withString:@"%3A"];
-            //            [self configDataWithString:str];
+//            [self configDataWithString:str];
             NSString *str2 = [NSString stringWithFormat:@"%@%@", kTwoListData, str];
             [manager GET:str2 parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
                 
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                // NSLog(@"%@", responseObject);
+               // NSLog(@"%@", responseObject);
                 NSDictionary *dictionary = responseObject;
                 NSDictionary *dict = dictionary[@"xiachufang"];
                 NSString *status = dict[@"@status"];
@@ -80,16 +78,16 @@
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 NSLog(@"%@", error);
             }];
-            
+
         }
-        
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
     
     
-    
-    
+  
+   
     
 }
 - (void)configDataWithArray:(NSMutableArray *)array{
@@ -107,7 +105,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
-    
+
 }
 
 - (void)configTableViewWithDic:(NSDictionary *)dic withArray:(NSMutableArray *)array{
@@ -138,9 +136,8 @@
         nameLabel.text = dict[@"author"][@"name"];
         nameLabel.textColor = [UIColor darkGrayColor];
         nameLabel.font = [UIFont systemFontOfSize:14];
-        UILabel *doneLabel = [[UILabel alloc]initWithFrame:CGRectMake(160, labelHeight + 10, kWidth - 160-10, 20)];
+        UILabel *doneLabel = [[UILabel alloc]initWithFrame:CGRectMake(220, labelHeight + 10, kWidth - 220 - 5, 20)];
         doneLabel.text = [NSString stringWithFormat:@"%@做过 %@收藏", dict[@"stats"][@"n_cooked"], dict[@"stats"][@"n_collects"]];
-        doneLabel.textAlignment = NSTextAlignmentRight;
         doneLabel.font = [UIFont systemFontOfSize:14];
         doneLabel.textColor = [UIColor orangeColor];
         
@@ -162,15 +159,11 @@
             }else{
                 peiliaoLabel.frame = CGRectMake((kWidth-11)/2 + 7, 280+labelHeight + 52 * i / 2 - 26 , (kWidth-11)/2, 50);
             }
-            UILabel *name = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, peiliaoLabel.frame.size.width / 4 * 2, 50)];
+            UILabel *name = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, peiliaoLabel.frame.size.width / 4 * 3, 50)];
             name.text = dictionary[@"name"];
-            UILabel *height = [[UILabel alloc]initWithFrame:CGRectMake(peiliaoLabel.frame.size.width / 4 * 2, 0, peiliaoLabel.frame.size.width / 2 -5, 50)];
+            UILabel *height = [[UILabel alloc]initWithFrame:CGRectMake(peiliaoLabel.frame.size.width / 4 * 3, 0, peiliaoLabel.frame.size.width / 4 , 50)];
             height.text = dictionary[@"amount"];
             height.font = [UIFont systemFontOfSize:15];
-            height.textAlignment = NSTextAlignmentRight;
-            if (kWidth<375) {
-                height.font = [UIFont systemFontOfSize:13];
-            }
             [peiliaoLabel addSubview:name];
             [peiliaoLabel addSubview:height];
             
@@ -242,7 +235,7 @@
 }
 #pragma mark---UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details" forIndexPath:indexPath];
+   DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details" forIndexPath:indexPath];
     cell.model = self.modelArray[indexPath.row];
     cell.backgroundColor = kBackColor;
     return cell;
@@ -255,7 +248,7 @@
 #pragma mark---UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     DetailsModel *model = self.modelArray[indexPath.row];
-    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details"];
+     DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details"];
     cell.contentLabel.text = model.name;
     CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     CGSize textViewSize = [cell.contentLabel sizeThatFits:CGSizeMake(cell.contentLabel.frame.size.width, FLT_MAX)];
@@ -266,11 +259,7 @@
     CGFloat height = cell.contentLabel.frame.size.height;
     height = h;
     return 15+ h;
-<<<<<<< HEAD
-}
-=======
    }
->>>>>>> af95301cdf8415c5582bad8f7d91aa01f4e115cf
 #pragma mark---button method
 - (void)details:(UIButton *)btn{
     DetailsViewController *details = [[DetailsViewController alloc]init];
@@ -280,40 +269,31 @@
 }
 
 - (void)shareButtonClickHandler:(id)sender
-{ AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-    
-    
-<<<<<<< HEAD
+{
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     if (delegate.isLogin==NO) {
-=======
-        if (delegate.isLogin==NO) {
->>>>>>> af95301cdf8415c5582bad8f7d91aa01f4e115cf
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"分享之前请先登录" delegate:self cancelButtonTitle:@"暂不登录" otherButtonTitles:@"立即登录", nil];
         [alert show];
-        
     }else{
-        self.shareView = [[ShareView alloc]init];
-<<<<<<< HEAD
-        
-=======
- 
->>>>>>> af95301cdf8415c5582bad8f7d91aa01f4e115cf
+    
+    self.shareView = [[ShareView alloc]init];
     }
 }
-
 #pragma mark---UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1) {
         self.tabBarController.selectedIndex = 2;
     }
 }
+
+
 #pragma mark---懒加载
 - (UITableView *)tableView{
     if (_tableView == nil) {
         self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kWidth, kHeigth-20)];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        self.tableView.estimatedRowHeight = 200;
+  self.tableView.estimatedRowHeight = 200;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
     }
     return _tableView;
@@ -336,13 +316,13 @@
 }
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

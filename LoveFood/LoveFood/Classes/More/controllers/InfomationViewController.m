@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tabBarController.tabBar.hidden = NO;
     [self setHearderView];
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 100, 44);
@@ -33,10 +32,10 @@
 }
 
 - (void)backBtnAction{
-    [self.navigationController popToRootViewControllerAnimated:YES];
     AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
     
     delegate.isLogin=NO;
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 - (void)viewWillAppear:(BOOL)animated{
     SDImageCache *cache = [SDImageCache sharedImageCache];
@@ -167,7 +166,7 @@
     imageview.layer.cornerRadius = 65;
     imageview.clipsToBounds = YES;
     [view addSubview:imageview];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(170, 65, 148, 20)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(170, 65, 150, 20)];
     label.text = @"     欢迎来到 i吃货";
     label.backgroundColor = kMainColor;
     label.layer.cornerRadius = 10;

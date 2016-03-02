@@ -30,7 +30,7 @@
     [self showBackBtn];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:nil] forCellReuseIdentifier:@"list"];
-    
+
     [self.view addSubview:self.tableView];
     [self.tableView launchRefreshing];
     
@@ -58,7 +58,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
-    
+
 }
 - (void)configDataWithString:(NSString *)string{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -67,8 +67,8 @@
     [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         //NSLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // NSLog(@"+++%@", responseObject);
-        [ProgressHUD showSuccess:@"美食已烹调完毕，请食用"];
+   // NSLog(@"+++%@", responseObject);
+         [ProgressHUD showSuccess:@"美食已烹调完毕，请食用"];
         NSDictionary *dictionary = responseObject;
         NSDictionary *dict = dictionary[@"xiachufang"];
         NSString *status = dict[@"@status"];
@@ -78,7 +78,7 @@
                     [self.arrayModel removeAllObjects];
                 }
             }
-            
+
             NSArray *array = dict[@"recipe"];
             for (NSDictionary *dic in array) {
                 ListModel *model = [[ListModel alloc]initWithDictionary:dic];
@@ -104,7 +104,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"list" forIndexPath:indexPath];
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+     //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.model = self.arrayModel[indexPath.row];
     return cell;
 }
@@ -171,13 +171,13 @@
 }
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

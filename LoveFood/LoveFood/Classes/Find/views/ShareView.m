@@ -8,6 +8,7 @@
 
 #import "ShareView.h"
 #import <ShareSDK/ShareSDK.h>
+
 @interface ShareView()
 @property (nonatomic, strong) UIView *shareView;
 @property (nonatomic, strong) UIView *blackView;
@@ -89,7 +90,7 @@
         self.shareView.frame = CGRectMake(0, kHeigth - 200, kWidth, 200);
     }];
     
-    
+
 }
 
 - (void)removeView{
@@ -107,33 +108,9 @@
 }
 
 - (void)weiboShare{
-    
-    
-    
-<<<<<<< HEAD
-    //1、创建分享参数
-    NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    NSArray* imageArray = @[[UIImage imageNamed:@"head.png"]];
-    if (imageArray)
-    {
-        [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货" ]images:imageArray url:[NSURL URLWithString:@"http://www.mob.com"] title:@"分享标题" type:SSDKContentTypeImage];
-    }
-    
-    //2、分享
-    [ShareSDK share:SSDKPlatformTypeSinaWeibo
-         parameters:shareParams
-     onStateChanged:^(SSDKResponseState state, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error)
-     {
-         switch (state) {
-             case SSDKResponseStateSuccess:
-             {
-                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享成功" message:nil delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
-                 [alertView show];
-                 break;
-=======
         //1、创建分享参数
         NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-        NSArray* imageArray = @[[UIImage imageNamed:@"head.png"]];
+        NSArray* imageArray = @[[UIImage imageNamed:@"find.png"]];
         if (imageArray)
         {
             [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货" ]images:imageArray url:[NSURL URLWithString:@"http://www.mob.com"] title:@"分享标题" type:SSDKContentTypeImage];
@@ -169,28 +146,8 @@
                  }
                  default:
                      break;
->>>>>>> af95301cdf8415c5582bad8f7d91aa01f4e115cf
              }
-             case SSDKResponseStateFail:
-             {
-                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享失败" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
-                 [alertView show];
-                 break;
-             }
-             case SSDKResponseStateCancel:
-             {
-                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享已取消"
-                                                                     message:nil
-                                                                    delegate:nil
-                                                           cancelButtonTitle:@"确定"
-                                                           otherButtonTitles:nil];
-                 [alertView show];
-                 break;
-             }
-             default:
-                 break;
-         }
-     }];
+         }];
     [self removeView];
     [ShareSDK cancelAuthorize:SSDKPlatformTypeSinaWeibo];
 }
@@ -236,7 +193,7 @@
          }
      }];
     [self removeView];
-    
+
 }
 - (void)circleShare{
     
@@ -283,11 +240,11 @@
     [self removeView];
 }
 /*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 
 @end
