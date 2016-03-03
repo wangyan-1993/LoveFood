@@ -94,6 +94,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     NSString *str = [NSString stringWithFormat:@"%@%@", kDetailsData, self.idDetails];
+    NSLog(@"---------------%@", str);
     [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

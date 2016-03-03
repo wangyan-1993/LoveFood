@@ -31,9 +31,9 @@
     self.navigationController.navigationBar.barTintColor = kMainColor;
     self.secret.secureTextEntry = YES;
     self.secret.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-    self.secret.clearButtonMode = UITextFieldViewModeUnlessEditing;
+    self.secret.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.name.keyboardType = UIKeyboardTypeEmailAddress;
-    self.name.clearButtonMode = UITextFieldViewModeUnlessEditing;
+    self.name.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.login.backgroundColor = [UIColor darkGrayColor];
     self.login.layer.cornerRadius = 5;
     self.login.clipsToBounds = YES;

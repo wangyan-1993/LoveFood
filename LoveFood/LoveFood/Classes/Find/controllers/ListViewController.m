@@ -41,6 +41,7 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     NSString *string = [NSString stringWithFormat:@"%@%@&offset=%ld", kListData, self.name, _pageCount * 9];
     NSString *url = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@", url);
     [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         // NSLog(@"%@", downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -64,6 +65,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     NSString *str = [NSString stringWithFormat:@"%@%@", kTwoListData, string];
+    NSLog(@"%@", str);
     [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         //NSLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
