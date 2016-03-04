@@ -26,7 +26,7 @@
     self.peiliaoLabel.text = [NSString stringWithFormat:@"  %@", model.peiliao];
     [self.image sd_setImageWithURL:[NSURL URLWithString:model.image  ]placeholderImage:nil];
     self.blackImage.image = [UIImage imageNamed:@"009"];
-}
+   }
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

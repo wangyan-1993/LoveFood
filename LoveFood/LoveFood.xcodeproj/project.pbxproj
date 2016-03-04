@@ -90,6 +90,7 @@
 		7AE6B66C1C64917D006E37AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B66B1C64917D006E37AC /* AVFoundation.framework */; };
 		7AE6B66E1C649185006E37AC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE6B66D1C649185006E37AC /* MediaPlayer.framework */; };
 		7AE6B6711C649FC4006E37AC /* InfomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6B6701C649FC4006E37AC /* InfomationViewController.m */; };
+		7AF16D6D1C8948B700F5E510 /* AnotherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF16D6C1C8948B700F5E510 /* AnotherTableViewCell.m */; };
 		7AF50D6B1C57280D0060D662 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */; };
 		7AF50D6C1C57280D0060D662 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */; };
 		7AF50D6F1C5729760060D662 /* DetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D6E1C5729760060D662 /* DetailsModel.m */; };
@@ -222,6 +223,8 @@
 		7AE6B66D1C649185006E37AC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7AE6B66F1C649FC4006E37AC /* InfomationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfomationViewController.h; sourceTree = "<group>"; };
 		7AE6B6701C649FC4006E37AC /* InfomationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfomationViewController.m; sourceTree = "<group>"; };
+		7AF16D6B1C8948B700F5E510 /* AnotherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherTableViewCell.h; sourceTree = "<group>"; };
+		7AF16D6C1C8948B700F5E510 /* AnotherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherTableViewCell.m; sourceTree = "<group>"; };
 		7AF50D681C57280D0060D662 /* DetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewCell.h; sourceTree = "<group>"; };
 		7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewCell.m; sourceTree = "<group>"; };
 		7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */,
 				7AC71C611C59EFB40019F8C3 /* ShareView.h */,
 				7AC71C621C59EFB40019F8C3 /* ShareView.m */,
+				7AF16D6B1C8948B700F5E510 /* AnotherTableViewCell.h */,
+				7AF16D6C1C8948B700F5E510 /* AnotherTableViewCell.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -863,6 +868,7 @@
 				7A3B68131C507B9300508DB8 /* FavoriteTableViewCell.m in Sources */,
 				7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */,
 				7A067B551C4F7F83009ADB8D /* ListTableViewCell.m in Sources */,
+				7AF16D6D1C8948B700F5E510 /* AnotherTableViewCell.m in Sources */,
 				7A23647F1C4E32F3005A0A3F /* UIViewController+Common.m in Sources */,
 				7A827CF21C4CACDE0076C419 /* MoreViewController.m in Sources */,
 			);

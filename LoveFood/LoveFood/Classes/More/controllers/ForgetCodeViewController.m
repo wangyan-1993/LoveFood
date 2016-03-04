@@ -26,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.view.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:0.3];
+
     [self showBackBtn];
     
 }
@@ -48,7 +49,7 @@
     
 }
 - (IBAction)done:(id)sender {
-    if (self.code.text == nil || self.secondCode.text == nil ||![self.code.text isEqualToString:self.secondCode.text]) {
+    if (self.code.text == nil || self.secondCode.text == nil ||![self.code.text isEqualToString:self.secondCode.text] || [self.code.text stringByReplacingOccurrencesOfString:@" " withString:@""].length <= 0) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码不能为空以及两次密码必须填写一致" delegate:self cancelButtonTitle:nil otherButtonTitles:@"取消", nil];
         [alert show];
     }else{
@@ -73,6 +74,8 @@
                         }
                     }}else{
                         NSLog(@"%@", error);
+                        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码修改失败" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                        [alert show];
                     }
             }];
              InfomationViewController *infoVC = [[InfomationViewController alloc]init];

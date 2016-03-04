@@ -39,7 +39,7 @@
 - (void)configData{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    NSString *string = [NSString stringWithFormat:@"%@%@&offset=%ld", kListData, self.name, _pageCount * 9];
+    NSString *string = [NSString stringWithFormat:@"%@%@&offset=%d", kListData, self.name, _pageCount * 9];
     NSString *url = [string stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSLog(@"%@", url);
     [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -57,7 +57,7 @@
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
+        NSLog(@"+++++++++++%@", error);
     }];
 
 }
@@ -65,7 +65,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     NSString *str = [NSString stringWithFormat:@"%@%@", kTwoListData, string];
-    NSLog(@"%@", str);
+    NSLog(@"+++++++++++---------%@", str);
     [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         //NSLog(@"%@",downloadProgress);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -92,7 +92,7 @@
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
+        NSLog(@"---------%@", error);
     }];
     
     [self.tableView tableViewDidFinishedLoading];
@@ -106,7 +106,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"list" forIndexPath:indexPath];
-     //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
     cell.model = self.arrayModel[indexPath.row];
     return cell;
 }

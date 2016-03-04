@@ -166,7 +166,7 @@
     imageview.layer.cornerRadius = 65;
     imageview.clipsToBounds = YES;
     [view addSubview:imageview];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(170, 65, 150, 20)];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(170, 65, kWidth/3+20, 20)];
     label.text = @"     欢迎来到 i吃货";
     label.backgroundColor = kMainColor;
     label.layer.cornerRadius = 10;

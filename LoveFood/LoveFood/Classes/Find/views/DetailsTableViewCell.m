@@ -22,9 +22,7 @@
     self.numLabel.text = [NSString stringWithFormat:@"%ld", model.num + 1];
     self.contentLabel.text = model.name;
     self.contentLabel.numberOfLines = 0;
-    if (kWidth < 375) {
-        self.image.hidden = YES;
-    }
+
     [self.image sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:nil];
  }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

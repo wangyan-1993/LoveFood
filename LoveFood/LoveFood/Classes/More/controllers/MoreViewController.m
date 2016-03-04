@@ -43,11 +43,7 @@
     self.zhuce.clipsToBounds = YES;
 
     
-    self.forget.backgroundColor = [UIColor darkGrayColor];
-    self.forget.layer.cornerRadius = 5;
-    self.forget.clipsToBounds = YES;
-
-   
+       
 }
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;

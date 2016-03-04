@@ -25,11 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self showBackBtn];
-    
+    self.view.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:0.3];
     // Do any additional setup after loading the view.
 }
 - (IBAction)zhuce:(id)sender {
-    if (self.mima.text == nil || self.secondmima.text == nil ||![self.mima.text isEqualToString:self.secondmima.text]) {
+    if (self.mima.text == nil || self.secondmima.text == nil ||![self.mima.text isEqualToString:self.secondmima.text] || [self.mima.text stringByReplacingOccurrencesOfString:@" " withString:@""].length <= 0) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码不能为空以及两次密码必须填写一致" delegate:self cancelButtonTitle:nil otherButtonTitles:@"取消", nil];
         [alert show];
     }else{

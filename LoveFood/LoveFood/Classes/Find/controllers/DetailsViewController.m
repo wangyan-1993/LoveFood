@@ -10,6 +10,8 @@
 #import "DetailsTableViewCell.h"
 #import "DetailsModel.h"
 #import "ShareView.h"
+#import "AnotherTableViewCell.h"
+
 @interface DetailsViewController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 {
     NSInteger i;
@@ -30,6 +32,7 @@
     [self configData];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"DetailsTableViewCell" bundle:nil] forCellReuseIdentifier:@"Details"];
+    
     [self.view addSubview:self.tableView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -137,11 +140,11 @@
         nameLabel.text = dict[@"author"][@"name"];
         nameLabel.textColor = [UIColor darkGrayColor];
         nameLabel.font = [UIFont systemFontOfSize:14];
-        UILabel *doneLabel = [[UILabel alloc]initWithFrame:CGRectMake(220, labelHeight + 10, kWidth - 220 - 5, 20)];
+        UILabel *doneLabel = [[UILabel alloc]initWithFrame:CGRectMake(150, labelHeight + 10, kWidth - 150 - 5-10, 20)];
         doneLabel.text = [NSString stringWithFormat:@"%@做过 %@收藏", dict[@"stats"][@"n_cooked"], dict[@"stats"][@"n_collects"]];
         doneLabel.font = [UIFont systemFontOfSize:14];
         doneLabel.textColor = [UIColor orangeColor];
-        
+        doneLabel.textAlignment = NSTextAlignmentRight;
         UILabel *yongliaoLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 250+labelHeight + 5, 100, 20)];
         yongliaoLabel.text = @"用料&做法";
         yongliaoLabel.font = [UIFont systemFontOfSize:15];
@@ -236,10 +239,26 @@
 }
 #pragma mark---UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailsModel *model = self.modelArray[indexPath.row];
+    if ([model.image isEqualToString:@""]) {
+        static NSString *str = @"another";
+        AnotherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+        if (cell == nil) {
+            cell = [[AnotherTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
+        }
+        cell.model = model;
+       
+   
+        cell.backgroundColor = kBackColor;
+        return cell;
+    }else{
+    
    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details" forIndexPath:indexPath];
-    cell.model = self.modelArray[indexPath.row];
+    cell.model = model;
     cell.backgroundColor = kBackColor;
+       
     return cell;
+    }
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.modelArray.count;
@@ -249,17 +268,22 @@
 #pragma mark---UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     DetailsModel *model = self.modelArray[indexPath.row];
+    if ([model.image isEqualToString:@""]) {
+        CGFloat height = [HWTools getTextHeightWithText:model.name bigestSize:CGSizeMake(kWidth-70, 1000) font:15];
+        height = height > 90 ? height : 90;
+        return height + 10;
+    }else{
      DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details"];
     cell.contentLabel.text = model.name;
-    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    CGSize textViewSize = [cell.contentLabel sizeThatFits:CGSizeMake(cell.contentLabel.frame.size.width, FLT_MAX)];
+    CGSize textViewSize = [cell.contentLabel sizeThatFits:CGSizeMake(kWidth- 160, FLT_MAX)];
     
-    CGFloat h = size.height + textViewSize.height;
+    CGFloat h =  textViewSize.height;
     
     h = h > 90 ? h : 90;  //90是图片显示的最低高度， 见xib
     CGFloat height = cell.contentLabel.frame.size.height;
     height = h;
-    return 15+ h;
+    return  10+h;
+    }
    }
 #pragma mark---button method
 - (void)details:(UIButton *)btn{
