@@ -11,10 +11,11 @@
 #import "DetailsModel.h"
 #import "ShareView.h"
 #import "AnotherTableViewCell.h"
-
+#import "DataBaseManager.h"
 @interface DetailsViewController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 {
     NSInteger i;
+    BOOL isCollect;
 }
 @property(nonatomic, retain) UITableView *tableView;
 @property(nonatomic, retain) NSMutableArray *modelArray;
@@ -36,17 +37,37 @@
     [self.view addSubview:self.tableView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(0, kHeigth - 40, kWidth, 40);
-    button.backgroundColor =[UIColor orangeColor];
+    button.frame = CGRectMake(0, kHeigth - 40, kWidth/2, 40);
     [button setTitle:@"分享" forState:UIControlStateNormal];
     button.backgroundColor = kMainColor;
     button.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [button addTarget:self action:@selector(shareButtonClickHandler:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeSystem];
+    button1.frame = CGRectMake(kWidth/2, kHeigth - 40, kWidth/2, 40);
+       DataBaseManager *dbManager = [DataBaseManager shareInatance];
+    
+    if ([dbManager selectAllCollectWithNum:[self.idDetails integerValue]].count == 0) {
+        [button1 setTitle:@"收藏" forState:UIControlStateNormal];
+        button1.tag = 0;
+    }else{
+        [button1 setTitle:@"取消收藏" forState:UIControlStateNormal];
+        button1.tag = 1;
+
+    }
+    
+    button1.backgroundColor = kMainColor;
+    button1.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [button1 addTarget:self action:@selector(collectButtonClickHandler:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
+
 
     
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    
+}
 - (void)configData{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
@@ -101,8 +122,9 @@
     [manager GET:str parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // NSLog(@"%@", responseObject );
+         //NSLog(@"%@", responseObject );
         NSDictionary *dic = responseObject;
+
         [self configTableViewWithDic:dic withArray:array];
         [self.tableView reloadData];
         
@@ -117,6 +139,10 @@
     NSString *status = xiachufangDic[@"@status"];
     if ([status isEqualToString:@"ok"]) {
         NSDictionary *dict = xiachufangDic[@"recipe"];
+        if (isCollect) {
+            DataBaseManager *dbManager = [DataBaseManager shareInatance];
+            [dbManager insertIntoCollect:dict withNumber:[self.idDetails integerValue]];
+        }
         NSArray *ingredientArray = dict[@"ingredient"];
         NSArray *instructionArray = dict[@"instruction"];
         for (NSDictionary *dic in instructionArray) {
@@ -247,7 +273,8 @@
             cell = [[AnotherTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
         }
         cell.model = model;
-       
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
    
         cell.backgroundColor = kBackColor;
         return cell;
@@ -256,7 +283,8 @@
    DetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Details" forIndexPath:indexPath];
     cell.model = model;
     cell.backgroundColor = kBackColor;
-       
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
     }
 }
@@ -304,6 +332,34 @@
     self.shareView = [[ShareView alloc]init];
     }
 }
+- (void)collectButtonClickHandler:(UIButton *)sender{
+    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    if (delegate.isLogin==NO) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"收藏之前请先登录" delegate:self cancelButtonTitle:@"暂不登录" otherButtonTitles:@"立即登录", nil];
+        [alert show];
+    }else{
+    
+    
+    if (sender.tag == 0) {
+        isCollect = YES;
+        
+            [sender setTitle:@"取消收藏" forState:UIControlStateNormal];
+        
+        sender.tag = 1;
+        [self configData];
+    }
+    else {
+        isCollect = NO;
+        
+                    DataBaseManager *dbManager = [DataBaseManager shareInatance];
+                    [dbManager deleteWithNum:[self.idDetails integerValue]];
+        [sender setTitle:@"收藏" forState:UIControlStateNormal];
+        sender.tag = 0;
+
+    }
+    }
+}
+
 #pragma mark---UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1) {

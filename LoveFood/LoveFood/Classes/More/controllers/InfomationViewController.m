@@ -8,6 +8,7 @@
 
 #import "InfomationViewController.h"
 #import <MessageUI/MessageUI.h>
+#import "CollectViewController.h"
 @interface InfomationViewController ()<UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *imageArray;
@@ -27,8 +28,8 @@
     UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = leftBarBtn;
     self.navigationController.navigationBar.barTintColor = kMainColor;
-    self.imageArray = @[@"trash", @"man", @"chat", @"mobile"];
-    self.titleArray = [NSMutableArray arrayWithObjects:@"清除缓存", @"用户反馈", @"给我评分", @"当前版本 1.0", nil];
+    self.imageArray = @[@"trash", @"man", @"chat", @"mobile", @"heart1"];
+    self.titleArray = [NSMutableArray arrayWithObjects:@"清除缓存", @"用户反馈", @"给我评分", @"当前版本 1.0", @"我的收藏", nil];
 }
 
 - (void)backBtnAction{
@@ -48,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return 5;
 }
 
 
@@ -97,8 +98,12 @@
         }
             
             break;
-            
-            
+         case 4:
+        {
+            CollectViewController *collect = [[CollectViewController alloc]init];
+            [self.navigationController pushViewController:collect animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -167,7 +172,7 @@
     imageview.clipsToBounds = YES;
     [view addSubview:imageview];
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(170, 65, kWidth/3+20, 20)];
-    label.text = @"     欢迎来到 i吃货";
+    label.text = @"  欢迎来到 i吃货";
     label.backgroundColor = kMainColor;
     label.layer.cornerRadius = 10;
     label.clipsToBounds = YES;

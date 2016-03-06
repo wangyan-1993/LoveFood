@@ -34,11 +34,11 @@
     self.secret.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.name.keyboardType = UIKeyboardTypeEmailAddress;
     self.name.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.login.backgroundColor = [UIColor darkGrayColor];
+    self.login.backgroundColor = kMainColor;
     self.login.layer.cornerRadius = 5;
     self.login.clipsToBounds = YES;
     
-    self.zhuce.backgroundColor = [UIColor darkGrayColor];
+    self.zhuce.backgroundColor = kMainColor;
     self.zhuce.layer.cornerRadius = 5;
     self.zhuce.clipsToBounds = YES;
 

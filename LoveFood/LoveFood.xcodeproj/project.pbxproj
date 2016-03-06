@@ -36,6 +36,9 @@
 		7A827CF01C4CACDE0076C419 /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CE11C4CACDE0076C419 /* FavoriteViewController.m */; };
 		7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CE71C4CACDE0076C419 /* FindViewController.m */; };
 		7A827CF21C4CACDE0076C419 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A827CED1C4CACDE0076C419 /* MoreViewController.m */; };
+		7A8F18EC1C8BE648005A11EB /* CollectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F18EB1C8BE648005A11EB /* CollectViewController.m */; };
+		7A8F18EF1C8BFD99005A11EB /* DataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F18EE1C8BFD99005A11EB /* DataBaseManager.m */; };
+		7A8F18F21C8C055B005A11EB /* Collect.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8F18F11C8C055B005A11EB /* Collect.m */; };
 		7AC71C361C59DCB50019F8C3 /* ShareSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC71C031C59DCB50019F8C3 /* ShareSDK.framework */; };
 		7AC71C371C59DCB50019F8C3 /* ShareSDKExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC71C061C59DCB50019F8C3 /* ShareSDKExtension.framework */; };
 		7AC71C381C59DCB50019F8C3 /* ShareSDKInterfaceAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC71C071C59DCB50019F8C3 /* ShareSDKInterfaceAdapter.framework */; };
@@ -145,6 +148,12 @@
 		7A827CEC1C4CACDE0076C419 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		7A827CED1C4CACDE0076C419 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		7A827CF41C4CAD480076C419 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		7A8F18EA1C8BE648005A11EB /* CollectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectViewController.h; sourceTree = "<group>"; };
+		7A8F18EB1C8BE648005A11EB /* CollectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectViewController.m; sourceTree = "<group>"; };
+		7A8F18ED1C8BFD99005A11EB /* DataBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataBaseManager.h; path = LoveFood/Classes/More/controllers/DataBaseManager.h; sourceTree = SOURCE_ROOT; };
+		7A8F18EE1C8BFD99005A11EB /* DataBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataBaseManager.m; path = LoveFood/Classes/More/controllers/DataBaseManager.m; sourceTree = SOURCE_ROOT; };
+		7A8F18F01C8C055B005A11EB /* Collect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Collect.h; path = LoveFood/Classes/More/controllers/Collect.h; sourceTree = SOURCE_ROOT; };
+		7A8F18F11C8C055B005A11EB /* Collect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Collect.m; path = LoveFood/Classes/More/controllers/Collect.m; sourceTree = SOURCE_ROOT; };
 		7AC71C031C59DCB50019F8C3 /* ShareSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDK.framework; sourceTree = "<group>"; };
 		7AC71C061C59DCB50019F8C3 /* ShareSDKExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKExtension.framework; sourceTree = "<group>"; };
 		7AC71C071C59DCB50019F8C3 /* ShareSDKInterfaceAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKInterfaceAdapter.framework; sourceTree = "<group>"; };
@@ -475,6 +484,8 @@
 				7AE6B65F1C648557006E37AC /* ForgetCodeViewController.m */,
 				7AE6B66F1C649FC4006E37AC /* InfomationViewController.h */,
 				7AE6B6701C649FC4006E37AC /* InfomationViewController.m */,
+				7A8F18EA1C8BE648005A11EB /* CollectViewController.h */,
+				7A8F18EB1C8BE648005A11EB /* CollectViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -482,6 +493,10 @@
 		7A827CEE1C4CACDE0076C419 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				7A8F18ED1C8BFD99005A11EB /* DataBaseManager.h */,
+				7A8F18EE1C8BFD99005A11EB /* DataBaseManager.m */,
+				7A8F18F01C8C055B005A11EB /* Collect.h */,
+				7A8F18F11C8C055B005A11EB /* Collect.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -859,13 +874,16 @@
 				7AE6B6601C648557006E37AC /* ForgetCodeViewController.m in Sources */,
 				7A827CB41C4C9EC30076C419 /* AppDelegate.m in Sources */,
 				7A067B511C4F7A95009ADB8D /* ProgressHUD.m in Sources */,
+				7A8F18EC1C8BE648005A11EB /* CollectViewController.m in Sources */,
 				7A827CB11C4C9EC30076C419 /* main.m in Sources */,
 				7AF50D6B1C57280D0060D662 /* DetailsTableViewCell.m in Sources */,
 				7A40607B1C606A6300956EC6 /* ZhuceViewController.m in Sources */,
+				7A8F18F21C8C055B005A11EB /* Collect.m in Sources */,
 				7AC71C631C59EFB40019F8C3 /* ShareView.m in Sources */,
 				7AF50D6F1C5729760060D662 /* DetailsModel.m in Sources */,
 				7AC71C3C1C59DCB50019F8C3 /* README.md in Sources */,
 				7A3B68131C507B9300508DB8 /* FavoriteTableViewCell.m in Sources */,
+				7A8F18EF1C8BFD99005A11EB /* DataBaseManager.m in Sources */,
 				7A827CF11C4CACDE0076C419 /* FindViewController.m in Sources */,
 				7A067B551C4F7F83009ADB8D /* ListTableViewCell.m in Sources */,
 				7AF16D6D1C8948B700F5E510 /* AnotherTableViewCell.m in Sources */,

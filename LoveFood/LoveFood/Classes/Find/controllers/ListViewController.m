@@ -106,7 +106,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"list" forIndexPath:indexPath];
-    //cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     cell.model = self.arrayModel[indexPath.row];
     return cell;
 }
