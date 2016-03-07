@@ -47,6 +47,8 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
+    self.name.text = nil;
+    self.secret.text = nil;
 }
 - (IBAction)login:(id)sender {
     

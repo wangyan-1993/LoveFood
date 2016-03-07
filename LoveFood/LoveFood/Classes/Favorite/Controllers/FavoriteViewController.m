@@ -47,8 +47,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"favorite" forIndexPath:indexPath];
-    
-   cell.model = self.arrayModel[indexPath.row];
+      cell.model = self.arrayModel[indexPath.row];
     return cell;
 }
 

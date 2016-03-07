@@ -14,7 +14,7 @@
 #import <SMS_SDK/SMSSDK.h>
 #import <BmobSDK/Bmob.h>
 
-@interface AppDelegate ()<WXApiDelegate>
+@interface AppDelegate ()<WXApiDelegate, UITabBarControllerDelegate>
 
 @end
 
@@ -73,12 +73,23 @@
     self.tabBarVC.viewControllers = @[findNav, favoriteNav, moreNav];
     self.tabBarVC.tabBar.barTintColor = [UIColor blackColor];
     self.window.rootViewController = self.tabBarVC;
-    
+    self.tabBarVC.delegate = self;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
+//很多时候我们的程序操作结构都是UITabBarController+UINavigationController，每个UITabBarController item里面都有很多层的UINavigationController，而UITabBarController默认有一个事件就是双击UITabBarController item时，会把这个item里的UINavigationController pop 到root，而我们有时不希望一下子就pop到了根视图，因为可能还会有一些逐层处理功能需要完成。这个时候如果想屏闭掉这个双击事件只留下单击切换标签事件的话，就可以参考下面的方法重写UITabBarController的代理：
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    UIViewController *tbSelectedController = tabBarController.selectedViewController;
+    
+    if ([tbSelectedController isEqual:viewController]) {
+        return NO;
+    }
+    
+    return YES;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
