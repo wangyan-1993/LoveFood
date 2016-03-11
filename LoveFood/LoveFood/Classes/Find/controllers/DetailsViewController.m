@@ -12,6 +12,7 @@
 #import "ShareView.h"
 #import "AnotherTableViewCell.h"
 #import "DataBaseManager.h"
+#import <BmobSDK/Bmob.h>
 @interface DetailsViewController ()<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 {
     NSInteger i;
@@ -39,6 +40,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(0, kHeigth - 40, kWidth/2, 40);
     [button setTitle:@"分享" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.backgroundColor = kMainColor;
     button.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [button addTarget:self action:@selector(shareButtonClickHandler:) forControlEvents:UIControlEventTouchUpInside];
@@ -47,7 +49,10 @@
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeSystem];
     button1.frame = CGRectMake(kWidth/2, kHeigth - 40, kWidth/2, 40);
        DataBaseManager *dbManager = [DataBaseManager shareInatance];
-    
+    dbManager.name = [BmobUser getCurrentUser].username;
+    NSLog(@"%@", self.title);
+    [button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+
     if ([dbManager selectAllCollectWithNum:[self.idDetails integerValue]].count == 0) {
         [button1 setTitle:@"收藏" forState:UIControlStateNormal];
         button1.tag = 0;
@@ -66,7 +71,9 @@
     
 }
 - (void)viewWillAppear:(BOOL)animated{
-    
+    [super viewWillAppear:animated];
+
+    self.tabBarController.tabBar.hidden = YES;
 }
 - (void)configData{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -141,6 +148,7 @@
         NSDictionary *dict = xiachufangDic[@"recipe"];
         if (isCollect) {
             DataBaseManager *dbManager = [DataBaseManager shareInatance];
+            dbManager.name = [BmobUser getCurrentUser].username;
             [dbManager insertIntoCollect:dict withNumber:[self.idDetails integerValue]];
         }
         NSArray *ingredientArray = dict[@"ingredient"];
@@ -330,6 +338,7 @@
     }else{
     
     self.shareView = [[ShareView alloc]init];
+        
     }
 }
 - (void)collectButtonClickHandler:(UIButton *)sender{
@@ -352,6 +361,7 @@
         isCollect = NO;
         
                     DataBaseManager *dbManager = [DataBaseManager shareInatance];
+        dbManager.name = [BmobUser getCurrentUser].username;
                     [dbManager deleteWithNum:[self.idDetails integerValue]];
         [sender setTitle:@"收藏" forState:UIControlStateNormal];
         sender.tag = 0;

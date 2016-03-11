@@ -65,7 +65,8 @@ static sqlite3 *dataBase = nil;
 //创建数据库表
 - (void)createDataBaseTable{
     //建表语句
-    NSString *sql = @"create table Collects (number integer , dic blob not null)";
+    NSString *sql =[NSString stringWithFormat:@"create table a%@ (number integer , dic blob not null)", self.name];
+    NSLog(@"%@", sql);
     //执行SQL语句
     /*
      第一个参数：数据库
@@ -96,14 +97,15 @@ static sqlite3 *dataBase = nil;
 - (void)insertIntoCollect:(NSDictionary *)dic withNumber:(NSInteger)num{
     [self openDataBase];
     sqlite3_stmt *stmt = nil;
+    NSLog(@"%@", self.name);
     NSData *dicData = [NSKeyedArchiver archivedDataWithRootObject:dic];
-     NSString *sql = @"insert into Collects(number, dic) values(?, ?)";
+     NSString *sql =[NSString stringWithFormat:@"insert into a%@(number, dic) values(?, ?)", self.name];
     int result = sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &stmt, NULL);
     if (result == SQLITE_OK) {
         //sql语句没有问题---绑定数据(绑定的是上边sql语句中的？。也就是讲？替换为应该存储的值)
         //绑定？时，标记从1开始，不是0
         
-        sqlite3_bind_int(stmt, 1, num);
+        sqlite3_bind_int(stmt,1, num);
         sqlite3_bind_blob(stmt, 2, [dicData bytes], [dicData length], NULL);
         
         //执行
@@ -123,11 +125,12 @@ static sqlite3 *dataBase = nil;
     [self openDataBase];
     //创建一个存储sql语句的变量
     sqlite3_stmt *stmt = nil;
-    NSString *sql = @"delete from Collects where number = ?";
+    NSString *sql = [NSString stringWithFormat:@"delete from a%@ where number = ?", self.name];
     //验证sql语句
     int result = sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &stmt, NULL);
     if (result == SQLITE_OK) {
         //绑定name的值
+        
         sqlite3_bind_int(stmt, 1, num);
         sqlite3_step(stmt);
 
@@ -143,10 +146,12 @@ static sqlite3 *dataBase = nil;
 - (NSMutableArray *)selectAllCollect{
     [self openDataBase];
     sqlite3_stmt *stmt = nil;
-    NSString *sql = @"select *from Collects";
+    NSString *sql = [NSString stringWithFormat:@"select *from a%@", self.name];
     int result = sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &stmt, NULL);
     NSMutableArray *array = nil;
     if (result == SQLITE_OK) {
+        
+
         array = [NSMutableArray new];
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             const void *value = sqlite3_column_blob(stmt, 1);
@@ -170,10 +175,11 @@ static sqlite3 *dataBase = nil;
 - (NSMutableArray *)selectAllCollectWithNum:(NSInteger)num{
     [self openDataBase];
     sqlite3_stmt *stmt = nil;
-    NSString *sql = @"select * from Collects where number = ?";
+    NSString *sql =[NSString stringWithFormat:@"select * from a%@ where number = ?", self.name];
     int result = sqlite3_prepare_v2(dataBase, [sql UTF8String], -1, &stmt, NULL);
     NSMutableArray *array = [NSMutableArray new];
     if (result == SQLITE_OK) {
+        
         sqlite3_bind_int(stmt, 1, num);
         while (sqlite3_step(stmt) == SQLITE_ROW){
             const void *value = sqlite3_column_blob(stmt, 1);

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ShareView : UIView
+@property(nonatomic, copy) NSString *shareString;
 - (void)removeView;
 @end

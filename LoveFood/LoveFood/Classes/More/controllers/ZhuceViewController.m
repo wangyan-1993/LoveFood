@@ -35,36 +35,23 @@
     }else{
     
     
-    [SMSSDK commitVerificationCode:self.secret.text phoneNumber:self.phoneNum.text zone:@"86" result:^(NSError *error) {
-        if (!error) {
-        NSLog(@"注册成功");
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alert show];
-            BmobObject *userInfo = [BmobObject objectWithClassName:@"UserInfo"];
-            [userInfo setObject:self.phoneNum.text forKey:@"phoneNum"];
-            [userInfo setObject:self.email.text forKey:@"email"];
-            [userInfo setObject:self.mima.text forKey:@"code"];
-           
-            [userInfo saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
-                //进行操作
-                 userInfo.objectId = self.phoneNum.text;
-                NSLog(@"添加成功");
-            }];
-            NSLog(@"%@", userInfo.objectId);
-            InfomationViewController *infoVC = [[InfomationViewController alloc]init];
-            [self.navigationController pushViewController:infoVC animated:YES];
-            
-        }else{
-             NSLog(@"错误信息:%@", error);
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
+        [BmobUser signOrLoginInbackgroundWithMobilePhoneNumber:self.phoneNum.text SMSCode:self.secret.text andPassword:self.mima.text block:^(BmobUser *user, NSError *error) {
+            if (!error) {
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                [alert show];
+                [self.navigationController popViewControllerAnimated:YES];
+                
 
+            }else{
+                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+
+            }
+        }];
         }
-    }];
-    }
     }
 - (IBAction)getSecret:(id)sender {
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNum.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+    [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:self.phoneNum.text andTemplate:@"验证码" resultBlock:^(int number, NSError *error) {
         if (!error) {
             NSLog(@"成功");
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"发送成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
@@ -75,8 +62,24 @@
             [alert show];
             
         }
+        
 
     }];
+    
+    
+//    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNum.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+//        if (!error) {
+//            NSLog(@"成功");
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"发送成功" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//            [alert show];
+//        }else{
+//            NSLog(@"错误信息:%@", error);
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alert show];
+//            
+//        }
+//
+//    }];
 
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

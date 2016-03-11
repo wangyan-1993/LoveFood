@@ -97,6 +97,7 @@
 		7AF50D6B1C57280D0060D662 /* DetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D691C57280D0060D662 /* DetailsTableViewCell.m */; };
 		7AF50D6C1C57280D0060D662 /* DetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */; };
 		7AF50D6F1C5729760060D662 /* DetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF50D6E1C5729760060D662 /* DetailsModel.m */; };
+		7AF729611C8F0E3F008B6F3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AF729601C8F0E3F008B6F3B /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,6 +240,7 @@
 		7AF50D6A1C57280D0060D662 /* DetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsTableViewCell.xib; sourceTree = "<group>"; };
 		7AF50D6D1C5729760060D662 /* DetailsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsModel.h; sourceTree = "<group>"; };
 		7AF50D6E1C5729760060D662 /* DetailsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsModel.m; sourceTree = "<group>"; };
+		7AF729601C8F0E3F008B6F3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EAD4C491D1FD262C0CDDDFCA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 				7A827CB51C4C9EC30076C419 /* Assets.xcassets */,
 				7A827CB71C4C9EC30076C419 /* LaunchScreen.storyboard */,
 				7A827CBA1C4C9EC30076C419 /* Info.plist */,
+				7AF729601C8F0E3F008B6F3B /* Images.xcassets */,
 				7A827CAF1C4C9EC30076C419 /* Supporting Files */,
 			);
 			path = LoveFood;
@@ -753,7 +756,7 @@
 				TargetAttributes = {
 					7A827CAB1C4C9EC30076C419 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = U3LEG79K3Q;
+						DevelopmentTeam = CCQ5LLLX4L;
 					};
 				};
 			};
@@ -790,6 +793,7 @@
 				7A827CB61C4C9EC30076C419 /* Assets.xcassets in Resources */,
 				7A76D6AD1C5885FC0023ECF2 /* RecomendList.plist in Resources */,
 				7AC71C401C59DCB50019F8C3 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				7AF729611C8F0E3F008B6F3B /* Images.xcassets in Resources */,
 				7AC71C441C59DCB50019F8C3 /* WeiboSDK.bundle in Resources */,
 				7AF50D6C1C57280D0060D662 /* DetailsTableViewCell.xib in Resources */,
 				7AC71C391C59DCB50019F8C3 /* ShareSDKUI.bundle in Resources */,
@@ -932,7 +936,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -975,7 +980,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1000,6 +1006,10 @@
 			baseConfigurationReference = EAD4C491D1FD262C0CDDDFCA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK",
@@ -1034,6 +1044,10 @@
 			baseConfigurationReference = 41514CB55E27F6DFAEAEC4DB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LoveFood/Librarys/ShareSDK",

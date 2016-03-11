@@ -9,6 +9,7 @@
 #import "InfomationViewController.h"
 #import <MessageUI/MessageUI.h>
 #import "CollectViewController.h"
+#import <BmobSDK/Bmob.h>
 @interface InfomationViewController ()<UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *imageArray;
@@ -34,11 +35,13 @@
 
 - (void)backBtnAction{
     AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-    
+    [BmobUser logout];
     delegate.isLogin=NO;
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
     SDImageCache *cache = [SDImageCache sharedImageCache];
     NSInteger cacheSize = [cache getSize];
     NSString *cacheStr = [NSString stringWithFormat:@"清除图片缓存(%.2fM)", (CGFloat)cacheSize / 1024 / 1024];

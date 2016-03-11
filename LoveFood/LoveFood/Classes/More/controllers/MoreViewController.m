@@ -46,33 +46,62 @@
        
 }
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     self.tabBarController.tabBar.hidden = NO;
     self.name.text = nil;
     self.secret.text = nil;
+    [self.view endEditing:YES];
 }
 - (IBAction)login:(id)sender {
-    
-    BmobQuery *query = [BmobQuery queryWithClassName:@"UserInfo"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+    [BmobUser loginInbackgroundWithAccount:self.name.text andPassword:self.secret.text block:^(BmobUser *user, NSError *error) {
         if (!error) {
+            AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
             
-        for (BmobObject *obj in array) {
-            if ([[obj objectForKey:@"phoneNum"] isEqualToString:self.name.text] && [[obj objectForKey:@"code"]isEqualToString:self.secret.text]) {
-                AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-                
-                delegate.isLogin=YES;
-                InfomationViewController *infoVC = [[InfomationViewController alloc]init];
-                [self.navigationController pushViewController:infoVC animated:YES];
-            }else{
-                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"用户名或密码填写不正确" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                [alert show];
-
-            }
-        }}else{
-            NSLog(@"%@", error);
+            delegate.isLogin=YES;
+            InfomationViewController *infoVC = [[InfomationViewController alloc]init];
+            [self.navigationController pushViewController:infoVC animated:YES];
+        }else{
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"用户名或密码填写不正确" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            
         }
+
     }];
-    
+//    [BmobUser loginWithUsernameInBackground:self.name.text password:self.secret.text block:^(BmobUser *user, NSError *error) {
+//        if (!error) {
+//            AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+//            
+//            delegate.isLogin=YES;
+//            InfomationViewController *infoVC = [[InfomationViewController alloc]init];
+//            [self.navigationController pushViewController:infoVC animated:YES];
+//        }else{
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"用户名或密码填写不正确" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alert show];
+//
+//        }
+//        
+//    }];
+//    BmobQuery *query = [BmobQuery queryWithClassName:@"UserInfo"];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+//        if (!error) {
+//            
+//        for (BmobObject *obj in array) {
+//            if ([[obj objectForKey:@"phoneNum"] isEqualToString:self.name.text] && [[obj objectForKey:@"code"]isEqualToString:self.secret.text]) {
+//                AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+//                
+//                delegate.isLogin=YES;
+//                InfomationViewController *infoVC = [[InfomationViewController alloc]init];
+//                [self.navigationController pushViewController:infoVC animated:YES];
+//            }else{
+//                UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:@"用户名或密码填写不正确" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//                [alert show];
+//
+//            }
+//        }}else{
+//            NSLog(@"%@", error);
+//        }
+//    }];
+//    
 
 }
 - (IBAction)zhuce:(id)sender {

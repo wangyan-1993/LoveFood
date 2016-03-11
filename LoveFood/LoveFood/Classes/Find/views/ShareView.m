@@ -110,10 +110,10 @@
 - (void)weiboShare{
         //1、创建分享参数
         NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-        NSArray* imageArray = @[[UIImage imageNamed:@"find.png"]];
+        NSArray* imageArray = @[[UIImage imageNamed:@"head.png"]];
         if (imageArray)
         {
-            [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货" ]images:imageArray url:[NSURL URLWithString:@"http://www.mob.com"] title:@"分享标题" type:SSDKContentTypeImage];
+            [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货,吃货的世界" ]images:imageArray url:[NSURL URLWithString:@"http://www.baidu.com"] title:@"分享标题" type:SSDKContentTypeImage];
         }
     
         //2、分享
@@ -154,10 +154,10 @@
 - (void)friendShare{
     //1、创建分享参数
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    NSArray* imageArray = @[[UIImage imageNamed:@"find.png"]];
+    NSArray* imageArray = @[[UIImage imageNamed:@"head.png"]];
     if (imageArray)
     {
-        [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货" ]images:imageArray url:[NSURL URLWithString:@"http://www.mob.com"] title:@"分享标题" type:SSDKContentTypeImage];
+        [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货,吃货的世界" ]images:imageArray url:[NSURL URLWithString:@"http://www.baidu.com"] title:@"分享标题" type:SSDKContentTypeImage];
     }
     
     //2、分享
@@ -199,10 +199,10 @@
     
     //1、创建分享参数
     NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
-    NSArray* imageArray = @[[UIImage imageNamed:@"find.png"]];
+    NSArray* imageArray = @[[UIImage imageNamed:@"head.png"]];
     if (imageArray)
     {
-        [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货" ]images:imageArray url:[NSURL URLWithString:@"http://www.mob.com"] title:@"分享标题" type:SSDKContentTypeImage];
+        [shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@ @value(url)", @"i吃货,吃货们的世界"]images:imageArray url:[NSURL URLWithString:@"http://www.baidu.com"] title:@"分享标题" type:SSDKContentTypeImage];
     }
     
     //2、分享

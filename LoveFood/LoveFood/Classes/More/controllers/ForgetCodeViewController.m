@@ -32,7 +32,8 @@
     
 }
 - (IBAction)getSecret:(id)sender {
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNum.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+    
+    [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:self.phoneNum.text andTemplate:@"" resultBlock:^(int number, NSError *error) {
         if (!error) {
             NSLog(@"发送成功");
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"发送验证码成功" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -43,8 +44,23 @@
             [alert show];
             
         }
+
     }];
     
+    
+//    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneNum.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
+//        if (!error) {
+//            NSLog(@"发送成功");
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"发送验证码成功" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alert show];
+//        }else{
+//            NSLog(@"错误信息:%@", error);
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//            [alert show];
+//            
+//        }
+//    }];
+//    
 
     
 }
@@ -54,42 +70,20 @@
         [alert show];
     }else{
         
-
-    
-    
-    [SMSSDK commitVerificationCode:self.secret.text phoneNumber:self.phoneNum.text zone:@"86" result:^(NSError *error) {
-        if (!error) {
-            NSLog(@"密码修改成功");
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码修改成功" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-            
-            BmobQuery *query = [BmobQuery queryWithClassName:@"UserInfo"];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-                if (!error) {
-                    
-                    for (BmobObject *obj in array) {
-                        if ([[obj objectForKey:@"phoneNum"] isEqualToString:self.phoneNum.text]) {
-                            [obj setObject:self.code.text forKey:@"code"];
-                            [obj updateInBackground];
-                        }
-                    }}else{
-                        NSLog(@"%@", error);
-                        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码修改失败" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                        [alert show];
-                    }
-            }];
-             InfomationViewController *infoVC = [[InfomationViewController alloc]init];
-            [self.navigationController pushViewController:infoVC animated:YES];
+[BmobUser resetPasswordInbackgroundWithSMSCode:self.secret.text andNewPassword:self.code.text block:^(BOOL isSuccessful, NSError *error) {
+    if (!error) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码修改成功" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
         
-        }else{
-            NSLog(@"错误信息:%@", error);
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-            
-        }
-    }];
-
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"错误提示" message:[NSString stringWithFormat:@"%@", error] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
     }
+}];
+    
+    
+       }
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.phoneNum resignFirstResponder];

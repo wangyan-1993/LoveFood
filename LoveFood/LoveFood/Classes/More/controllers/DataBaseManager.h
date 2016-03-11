@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface DataBaseManager : NSObject
+@property(nonatomic, copy) NSString *name;
 //用单例创建数据库管理对象
 + (DataBaseManager *)shareInatance;
 #pragma mark------数据库基础操作

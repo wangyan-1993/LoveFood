@@ -13,6 +13,7 @@
 #import "ListModel.h"
 #import "DetailsViewController.h"
 #import "ListModel.h"
+#import <BmobSDK/Bmob.h>
 @interface CollectViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *modelArray;
@@ -27,6 +28,7 @@
     self.title = @"我的收藏";
     [self.tableView registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:nil] forCellReuseIdentifier:@"list"];
 DataBaseManager *dbManager = [DataBaseManager shareInatance];
+    dbManager.name = [BmobUser getCurrentUser].username;
     NSMutableArray *array = [NSMutableArray new];
 array = [dbManager selectAllCollect];
     
@@ -37,10 +39,14 @@ array = [dbManager selectAllCollect];
     [self.view addSubview:self.tableView];
 }
 - (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     if (self.modelArray.count > 0) {
         [self.modelArray removeAllObjects];
     }
+    self.tabBarController.tabBar.hidden = YES;
     DataBaseManager *dbManager = [DataBaseManager shareInatance];
+    dbManager.name = [BmobUser getCurrentUser].username;
+
     NSMutableArray *array = [NSMutableArray new];
     array = [dbManager selectAllCollect];
     

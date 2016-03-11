@@ -30,10 +30,14 @@
     [self showBackBtn];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:nil] forCellReuseIdentifier:@"list"];
-
+[self.tableView launchRefreshing];
     [self.view addSubview:self.tableView];
-    [self.tableView launchRefreshing];
     
+    
+}
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [ProgressHUD dismiss];
 }
 #pragma mark---解析数据
 - (void)configData{
@@ -94,9 +98,9 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"---------%@", error);
     }];
-    
+        self.tableView.reachedTheEnd = NO;
     [self.tableView tableViewDidFinishedLoading];
-    self.tableView.reachedTheEnd = NO;
+
 }
 
 #pragma mark---UITableViewDataSource
@@ -124,7 +128,7 @@
 }
 #pragma mark---PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
-    _pageCount = 0;
+    _pageCount = 1;
     self.refreshing = YES;
     [self performSelector:@selector(configData) withObject:nil afterDelay:1.0];
 }
